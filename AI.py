@@ -2,19 +2,24 @@ import numpy
 
 
 def checkPoints(pnts):
+    checkForDoubleMill(pnts)
+    # checkForMill(pnts)
+
+
+def checkForMill(pnts):
     print("----------------------------------------------")
 
     # Horizontale Suche nach möglichen Mühlen
     print("Horizontal")
     num_neighbours = 0
 
-    pieces = [["P", "P", "P", "", "-", "-", "P"],
-            ["-", "", "-", "", "-", "", "-"],
-            ["-", "-", "", "", "", "-", "-"],
-            ["P", "", "C", "-", "", "", ""],
-            ["-", "-", "", "", "", "-", "-"],
-            ["-", "", "-", "", "-", "", "-"],
-            ["", "-", "-", "", "-", "-", ""]]
+    pieces = [["P", "P", "P", "-", "-", "P"],
+              ["-", "", "-", "", "-", "", "-"],
+              ["-", "-", "", "", "", "-", "-"],
+              ["P", "", "C", "-", "", "", ""],
+              ["-", "-", "", "", "", "-", "-"],
+              ["-", "", "-", "", "-", "", "-"],
+              ["", "-", "-", "", "-", "-", ""]]
 
     for r in range(len(pnts)):
         counter = 0
@@ -74,6 +79,10 @@ def checkPoints(pnts):
     #           counter += 1
 
     #    print(dangerIndicator("vertikal", counter))
+
+
+def checkForDoubleMill(pnts):
+    print(pnts)
 
 
 def dangerIndicator(runthroughType, count):

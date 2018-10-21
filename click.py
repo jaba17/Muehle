@@ -1,43 +1,17 @@
-import tkinter
+from tkinter import *
 
-root = tkinter.Tk()
-root.resizable(False, False)
-
-root = tkinter.Frame(root, width=900, height=1000)
-# root.grid(4, 4)
+root = Tk()
 
 
-def key(event):
-    print("pressed", repr(event.char))
+def onObjectClick(event):
+    print('Clicked', event.x, event.y, event.widget)
+    print(event.widget.find_closest(event.x, event.y))
 
 
-def callback(event):
-    # frame.focus_set()
-    print("clicked at", event.x, event.y)
-
-
-def callback_l(event):
-    # frame.focus_set()
-    print("label clicked at", event.x, event.y)
-
-
-# frame = tkinter.Frame(root, width=900, height=1000)
-# frame.bind("<Button-1>", callback)
-# frame.pack()
-
-# label1 = Label(root, text='dsadf', borderwidth=1).grid(row=0, column=0)
-# label1.grid(row=0, column=0)
-# label1.configure(background="black")
-# label1.bind("<Button-1>", callback_l)
-# label1.pack()
-# entryBox = tkinter.Entry(root)
-# entryBox.grid(row=2, column=1)
-
-point_location = [32, 141, 250, 405, 549, 659, 767]
-
-for r in range(7):
-    for s in range(7):
-        label_ = tkinter.Label(root, text='R%s/C%s')
-
+canv = Canvas(root, width=100, height=100)
+#canv.bind("<Button-1>", callback)
+obj1 = canv.create_oval(30, 30, 60, 60, fill='black')
+canv.tag_bind(obj1, "<Button-1>", onObjectClick)
+canv.pack()
 
 root.mainloop()

@@ -19,7 +19,7 @@ canvas.create_image(2, 2, image=image_tk, anchor=NW)
 def onObjectClick(event):
     # print('Clicked', event.x, event.y, event.widget)
     id = event.widget.find_closest(event.x, event.y)[0]
-    #if id:
+    # if id:
     setPointAsClicked(id)
 
 
@@ -30,7 +30,7 @@ def setPointAsClicked(number):
             if pieces[r][s] != "-":
                 counter += 1
                 if counter == number:
-                    print(str(r)+" "+str(s))
+                    print(str(r) + " " + str(s))
 
 
 def hide_me(event):
@@ -75,13 +75,21 @@ cleaned_location_set = [[1, 0, 0],
                         [0, 1, 0, 0, 0],
                         [1, 0, 0]]
 
-muehle_grid = [[1, -1, -1, 1, -1, -1, 1],
-               [-1, 1, -1, 1, -1, 1, -1],
-               [-1, -1, 1, 1, 1, -1, -1],
-               [1, 1, 1, -1, 1, 1, 1],
-               [-1, -1, 1, 1, 1, -1, -1],
-               [-1, 1, -1, 1, -1, 1, -1],
-               [1, -1, -1, 1, -1, -1, 1]]
+full_muehle_grid = [[1, -1, -1, 1, -1, -1, 1],
+                    [-1, 1, -1, 1, -1, 1, -1],
+                    [-1, -1, 1, 1, 1, -1, -1],
+                    [1, 1, 1, -1, 1, 1, 1],
+                    [-1, -1, 1, 1, 1, -1, -1],
+                    [-1, 1, -1, 1, -1, 1, -1],
+                    [1, -1, -1, 1, -1, -1, 1]]
+
+muehle_grid = [[0, -1, -1, 0, -1, -1, 0],
+               [-1, 0, -1, 0, -1, 0, -1],
+               [-1, -1, 0, 0, 0, -1, -1],
+               [0, 0, 0, -1, 0, 0, 0],
+               [-1, -1, 0, 0, 0, -1, -1],
+               [-1, 0, -1, 0, -1, 0, -1],
+               [0, -1, -1, 0, -1, -1, 0]]
 
 location_set = [[1, -1, -1, 1, -1, -1, 1],
                 [0, 1, -1, 1, -1, 1, 0],
@@ -110,7 +118,7 @@ pieces = [["", "-", "-", "", "-", "-", ""],
           ["-", "", "-", "", "-", "", "-"],
           ["", "-", "-", "", "-", "-", ""]]
 
-point_location = [10, 135, 255, 430, 590, 700, 830]
+point_location = [19, 135, 255, 430, 600, 720, 840]
 
 
 # for r in range(7):
@@ -139,13 +147,22 @@ def showSettedPoints(grid):
         # canvas.tag_bind(click_canvas, '<ButtonPress-1>', locationClicked(e, x=s, y=r))
 
 
-# showSettedPoints(muehle_grid)
-drawClickOverlay(muehle_grid)
+def movePoint(point_x, point_y):
+    for r in range(7):
+        for s in range(7):
+            if location_set[r][s] == 1:
+                if point_y == r and point_x == s:
+                    muehle_grid[r][s] = 0
+                    muehle_grid[r - 1][s - 1] = 1
+
+
+# drawClickOverlay(full_muehle_grid)
+movePoint(3, 2)
+showSettedPoints(muehle_grid)
 
 if active_player == TRUE:
     player_display["text"] = "Aktiver Spieler: Du"
 
 canvas.pack(expand=YES, fill=BOTH)
-
 
 mainloop()

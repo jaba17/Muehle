@@ -1,3 +1,4 @@
+import time
 import tkinter as tk
 import tkinter
 from tkinter import *
@@ -25,6 +26,8 @@ class Muehle:
         print("Welcoime to muehle")
         self.setupBoard()
 
+        mainloop()
+
     def setupBoard(self):
         piece_display = tkinter.Label(canvas, text="Anzahl der Steine: " + str(num_pieces))
         piece_display.place(x=100, y=950)
@@ -38,6 +41,9 @@ class Muehle:
         player_display.place(x=500, y=950)
         player_display.pack_propagate()
 
+        self.drawClickOverlay(VARIABLES.muehle_grid)
+        self.showSettedPoints(VARIABLES.pieces)
+
     # for r in range(7):
     #    for s in range(len(location_set[r])):
     #        if (location_set[r][s] == 1):
@@ -46,10 +52,44 @@ class Muehle:
     #            canvas.create_oval(x_loc, y_loc, x_loc + 60, y_loc + 60, width=2, fill='black')
 
     def onObjectClick(self, event):
-        # print('Clicked', event.x, event.y, event.widget)
-        id = event.widget.find_closest(event.x, event.y)[0]
-        # if id:
+        print('Clicked', event.x, event.y, event.widget)
+        loc = VARIABLES.point_location
+        x = event.x - 20
+        y = event.y - 20  # if id:
+        print(str(x) + " " + str(y))
+        x_index = 0
+        y_index = 0
+        for r in range(7):
+            if loc[r] - 30 < x < loc[r] + 30:
+                x_index = r
+                break
+
+        for s in range(7):
+            if loc[s] - 30 < x < loc[s] + 30:
+                y_index = s
+
+        if VARIABLES.muehle_grid[y_index][x_index] == 1:
+            self.setPoint(y_index, x_index, "P")
+            self.game()
         # setPointAsClicked(id)
+
+
+    def game(self):
+        self.showSettedPoints(VARIABLES.pieces)
+
+        #time.sleep(2)
+
+        self.setPoint(0, 3, "C")
+
+        self.showSettedPoints(VARIABLES.pieces)
+
+    def setPoint(self, y_index, x_index, player):
+        VARIABLES.pieces[y_index][x_index] = player
+        print(VARIABLES.pieces)
+
+
+    def drawPoint(self, x_index, y_index, player):
+        canvas.create_oval()
 
     def setPointAsClicked(self, number):
         counter = 0
@@ -60,18 +100,24 @@ class Muehle:
                     if counter == number:
                         print(str(r) + " " + str(s))
 
-    def hide_me(event):
+    def hide_me(self, event):
         event.widget.pack_forget()
 
-    def drawClickOverlay(grid):
+    # https://stackoverflow.com/questions/9581384/how-to-create-a-transparent-rectangle-responding-to-click-event-in-tkinter
+    def drawClickOverlay(self, grid):
         for r in range(7):
             for s in range(7):
                 if grid[r][s] == 1:
-                    click_element = canvas.create_oval(VARIABLES.point_location[s],
-                                                       VARIABLES.point_location[r],
-                                                       VARIABLES.point_location[s] + 40,
-                                                       VARIABLES.point_location[r] + 40, width=6, fill='black')
-                    # canvas.tag_bind(click_element, "<Button-1>", onObjectClick)
+                    #click_element = canvas.create_rectangle(VARIABLES.point_location[s],
+                     #                                       VARIABLES.point_location[r],
+                      #                                      VARIABLES.point_location[s] + 40,
+                       #                                     VARIABLES.point_location[r] + 40, width=6, fill='black')
+
+                    # click_element = canvas.create_oval(VARIABLES.point_location[s],
+                    #                                  VARIABLES.point_location[r],
+                    #                                 VARIABLES.point_location[s] + 40,
+                    #                                VARIABLES.point_location[r] + 40, width=6, fill='black')
+                    canvas.bind("<Button-1>", self.onObjectClick)
 
     # entryBox = tkinter.Entry(canvas)
     # entryBox.grid(row=2, column=1)
@@ -87,18 +133,25 @@ class Muehle:
         print("------------------------")
         # print(event.widget.find_closest(event.x, event.y))
 
-    def showSettedPoints(grid):
+    def showSettedPoints(self, grid):
+
         for r in range(7):
             for s in range(7):
-                if grid[r][s] == 1:
+                if grid[r][s] == "P":
                     click_canvas = canvas.create_oval(VARIABLES.point_location[s] + 10,
                                                       VARIABLES.point_location[r] + 10,
                                                       VARIABLES.point_location[s] + 40,
                                                       VARIABLES.point_location[r] + 40, width=2, fill='black')
 
+                if grid[r][s] == "C":
+                    click_canvas = canvas.create_oval(VARIABLES.point_location[s] + 10,
+                                                      VARIABLES.point_location[r] + 10,
+                                                      VARIABLES.point_location[s] + 40,
+                                                      VARIABLES.point_location[r] + 40, width=2, fill='white')
+
         # canvas.tag_bind(click_canvas, '<ButtonPress-1>', locationClicked(e, x=s, y=r))
 
-    def movePoint(point_x, point_y):
+    def movePoint(self, point_x, point_y):
         for r in range(7):
             for s in range(7):
                 if VARIABLES.location_set[r][s] == 1:
@@ -107,8 +160,8 @@ class Muehle:
                         VARIABLES.muehle_grid[s - 2][r - 1] = 1
 
     # drawClickOverlay(full_muehle_grid)
-    movePoint(3, 2)
-    showSettedPoints(VARIABLES.muehle_grid)
+    # movePoint(3, 2)
+    # showSettedPoints(VARIABLES.muehle_grid)
 
     # if active_player == TRUE:
     # player_display["text"] = "Aktiver Spieler: Du"
@@ -118,4 +171,3 @@ class Muehle:
 
 m = Muehle()
 
-mainloop()

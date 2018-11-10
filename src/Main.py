@@ -1,7 +1,6 @@
 #!/usr/bin/python
-from tkinter import *
 
-from Muehle import Muehle
+from GUI.Muehle import Muehle
 
 
 # Das ist die Hauptklasse des Projektes

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f27039d-877c-4173-a1f7-e86f7a99063b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SetPoints.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VARIABLES.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/CheckSetPoints.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Muehle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Muehle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/konzept.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/konzept.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Muehle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Muehle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VARIABLES.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/VARIABLES.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +21,10 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/VARIABLES.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="382">
-                    <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+                  <state relative-caret-position="577">
+                    <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
                     <folding>
-                      <marker date="1541865721646" expanded="true" signature="16:17" ph="..." />
+                      <marker date="1541880058586" expanded="true" signature="16:17" ph="..." />
                     </folding>
                   </state>
                 </provider>
@@ -43,10 +39,11 @@
     <session id="1014959658">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="29" />
+          <entry key="project.closed" value="31" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.10" value="7" />
+          <entry key="project.open.time.10" value="8" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -55,29 +52,29 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="8" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="40" />
           <entry key="md" value="12" />
-          <entry key="py" value="11170" />
-          <entry key="txt" value="513" />
+          <entry key="py" value="12215" />
+          <entry key="txt" value="532" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="12" />
-          <entry key="PLAIN_TEXT" value="553" />
-          <entry key="Python" value="11170" />
+          <entry key="PLAIN_TEXT" value="572" />
+          <entry key="Python" value="12215" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
           <entry key="png" value="6" />
-          <entry key="py" value="43" />
+          <entry key="py" value="45" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -86,7 +83,7 @@
           <entry key="Image" value="6" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="43" />
+          <entry key="Python" value="45" />
         </counts>
       </usages-collector>
     </session>
@@ -96,11 +93,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tes.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Muehle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" selection-start-line="9" selection-end-line="10" />
+            <state relative-caret-position="255">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1541879912876" expanded="true" signature="442:444" ph="..." />
+                <marker date="1541879912876" expanded="true" signature="2143:2304" ph="..." />
+                <marker date="1541879912876" expanded="true" signature="2349:2435" ph="..." />
+                <marker date="1541879912876" expanded="true" signature="2486:2521" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/esafd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -108,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/konzept.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -126,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="120">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -138,8 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CheckSetPoints.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="140" column="37" lean-forward="true" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
+            <state relative-caret-position="1725">
+              <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
               <folding>
                 <marker date="1541863137375" expanded="true" signature="47:288" ph="..." />
                 <marker date="1541863137375" expanded="true" signature="596:597" ph="..." />
@@ -155,8 +168,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SetPoints.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="480">
+              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
                 <marker date="1541865674367" expanded="true" signature="67:68" ph="..." />
@@ -166,11 +179,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding>
                 <marker date="1541865300419" expanded="true" signature="16:17" ph="..." />
                 <marker date="1541865300419" expanded="true" signature="16:18" ph="..." />
@@ -180,18 +193,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/mühle.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#18#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -263,6 +268,8 @@
         <option value="$PROJECT_DIR$/src/functions.py" />
         <option value="$PROJECT_DIR$/src/Functions.py" />
         <option value="$PROJECT_DIR$/src/SetPoints.py" />
+        <option value="$PROJECT_DIR$/src/esafd.py" />
+        <option value="$PROJECT_DIR$/src/GUI/Muehle.py" />
         <option value="$PROJECT_DIR$/src/VARIABLES.py" />
       </list>
     </option>
@@ -296,6 +303,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -308,11 +316,16 @@
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,6 +341,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/GUI" />
       <recent name="$PROJECT_DIR$/res" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -344,7 +358,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SetPoints">
+  <component name="RunManager" selected="Python.muehle">
     <configuration name="CheckSetPoints" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -387,7 +401,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="VARIABLES" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="esafd" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -399,7 +413,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/VARIABLES.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/esafd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -441,7 +455,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Muehle.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/GUI/Muehle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -453,17 +467,17 @@
     <list>
       <item itemvalue="Python.muehle" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.VARIABLES" />
       <item itemvalue="Python.CheckSetPoints" />
       <item itemvalue="Python.SetPoints" />
+      <item itemvalue="Python.esafd" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.muehle" />
+        <item itemvalue="Python.esafd" />
         <item itemvalue="Python.SetPoints" />
         <item itemvalue="Python.CheckSetPoints" />
-        <item itemvalue="Python.muehle" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.VARIABLES" />
       </list>
     </recent_temporary>
   </component>
@@ -513,7 +527,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541845261955</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added new functions">
+      <created>1541867084833</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541867084833</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added new functions">
+      <created>1541867111606</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1541867111606</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -525,8 +553,8 @@
       <window_info id="Favorites" order="2" sideWeight="0.50149703" side_tool="true" weight="0.20980495" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49551925" weight="0.30042017" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49973643" visible="true" weight="0.39810926" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49551925" visible="true" weight="0.30042017" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49973643" weight="0.39810926" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -563,7 +591,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="recognizes mills" />
-    <option name="LAST_COMMIT_MESSAGE" value="recognizes mills" />
+    <MESSAGE value="added new functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -577,16 +606,6 @@
           <url>file://$PROJECT_DIR$/src/click.py</url>
           <line>13</line>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/Muehle.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/Muehle.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/CheckSetPoints.py</url>
@@ -627,6 +646,46 @@
           <url>file://$PROJECT_DIR$/src/SetPoints.py</url>
           <line>30</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/GUI/Muehle.py</url>
+          <line>140</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/GUI/Muehle.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/GUI/Muehle.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/GUI/Muehle.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/GUI/Muehle.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/GUI/Muehle.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/GUI/Muehle.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/GUI/Muehle.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -689,16 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Muehle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" selection-start-line="6" selection-end-line="7" />
-          <folding>
-            <marker date="1541851649620" expanded="true" signature="430:432" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -706,10 +755,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/mühle.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/esafd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/konzept.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -720,29 +779,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/mühle.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#18#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="120">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -750,20 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VARIABLES.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-          <folding>
-            <marker date="1541865721646" expanded="true" signature="16:17" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CheckSetPoints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="140" column="37" lean-forward="true" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
+        <state relative-caret-position="1725">
+          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
           <folding>
             <marker date="1541863137375" expanded="true" signature="47:288" ph="..." />
             <marker date="1541863137375" expanded="true" signature="596:597" ph="..." />
@@ -777,8 +806,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SetPoints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="480">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
             <marker date="1541865674367" expanded="true" signature="67:68" ph="..." />
@@ -790,10 +819,48 @@
     <entry file="file://$PROJECT_DIR$/src/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
             <marker date="1541865300419" expanded="true" signature="16:17" ph="..." />
             <marker date="1541865300419" expanded="true" signature="16:18" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VARIABLES.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+          <folding>
+            <marker date="1541880058586" expanded="true" signature="16:17" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Muehle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1541879912876" expanded="true" signature="442:444" ph="..." />
+            <marker date="1541879912876" expanded="true" signature="2143:2304" ph="..." />
+            <marker date="1541879912876" expanded="true" signature="2349:2435" ph="..." />
+            <marker date="1541879912876" expanded="true" signature="2486:2521" ph="..." />
           </folding>
         </state>
       </provider>

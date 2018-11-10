@@ -1,7 +1,11 @@
-matrix wird mit switch geprüft
-    ->
 
+Ablauf:
 
+1) Starten des Programms durch die Main.py
+2) Weiterleitung auf die Klasse Muehle.py
+   Zeichnen des Spielbrettes
+   Verarbeiten des Klickens und Speichern in Arrays (welche sich in VARIABLES.py befinden)
+4) Aufrufen der AI
 
 
 
@@ -16,3 +20,4 @@ Mühle: Bei Mühlen werden die Koodinaten des ersten und des letzten Steines ang
        Folglich ist eine Mühle, die aus den drei Steines (0/0), (0/3) und (0/6) gebildet wurde (0/0)(0/6),
        oder [[0, 0], [0, 6]] als Array.
 
+Ketten: Ähnlich wie die Mühlen werden mehrere Steine, welche sich in einer Reihe befinden (Ketten)

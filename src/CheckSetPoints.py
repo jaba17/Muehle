@@ -8,7 +8,7 @@ class CheckSetPoints:
         # checkMatrix(pieces)
 
         locations = self.describeBoard(VARIABLES.pieces)
-        self.newCheckForMills(locations)
+        self.checkForMills(locations)
         # self.convertMatrix(VARIABLES.pieces)
         # self.checkPoints(locations)
 
@@ -85,11 +85,6 @@ class CheckSetPoints:
 
     #     for s in range(7):
 
-    #         if pnts[s][r] == "P":
-    #           counter += 1
-
-    #    print(dangerIndicator("vertikal", counter))
-
     def dangerIndicator(runthroughType, count):
         if count == 0:
             print("Keine Gefahr")
@@ -102,8 +97,7 @@ class CheckSetPoints:
 
     # Beschreibt gesetzten Spielsteine (P = Spieler, C = Computer) sowie deren x und y Werte
 
-    @staticmethod
-    def describeBoard(mat):
+    def describeBoard(self, mat):
         board_array = []
         i = 4
 
@@ -124,7 +118,7 @@ class CheckSetPoints:
                         i += 1
 
     # Bei dieser Methode wird der
-    def newCheckForMills(self, pnts):
+    def checkForMills(self, pnts):
         comparison_mills_h = VARIABLES.mills_horizontal
         comparison_mills_v = VARIABLES.mills_vertical
 
@@ -157,7 +151,9 @@ class CheckSetPoints:
                 return
             if counter == 3:
                 print("Mühle von (" + str(x1) + "/" + str(y1) + ") bis (" + str(x2) + "/" + str(y2) + ")")
-
+                VARIABLES.mills.append("P")
+                VARIABLES.mills.append([['i', x1, y1], ['i', x2, y2]])
+                print(VARIABLES.mills)
         print("---------------------------------------------------------------------------------------------")
         # --------------------------------------------------------------------------------------------------------------------
         # vertikale Prüfung

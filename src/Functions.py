@@ -1,3 +1,6 @@
+from VARIABLES import *
+
+
 class Functions:
 
     def describeBoard(self, mat):
@@ -11,3 +14,12 @@ class Functions:
                     #   board_array[i] = board_array[i] = [mat[r][s], r, s]
                     i += 1
         return board_array
+
+    def locIsPossible(self, x_koord, y_koord):
+        if VARIABLES.pieces[y_koord][x_koord] == "":
+            return True
+        else:
+            return False
+
+
+var = Functions()

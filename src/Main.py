@@ -8,4 +8,5 @@ class Main:
 
     def __init__(self):
         m = Muehle()
+        # Aufrufen des Konstruktors
         m.__init__()

@@ -1,0 +1,4 @@
+1) Setzen
+
+Wenn möglich: In die Ecken setzen
+Prüfen, ob der Spieler zwei Steine in eine Reihe gesetzt hat

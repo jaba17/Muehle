@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f27039d-877c-4173-a1f7-e86f7a99063b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muehle.py" beforeDir="false" afterPath="$PROJECT_DIR$/muehle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/AI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai/tensorflow_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/click.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/click.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/konzept.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/konzept.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muehle-1-spielfeld.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/muehle-1-spielfeld.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muehle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Muehle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mühle.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/mühle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,35 +28,39 @@
     <session id="1014959658">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="29" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="6" />
           <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.4" value="8" />
-          <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.9" value="8" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="15" />
-          <entry key="py" value="7968" />
+          <entry key="dummy" value="19" />
+          <entry key="py" value="8486" />
           <entry key="txt" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="77" />
-          <entry key="Python" value="7968" />
+          <entry key="PLAIN_TEXT" value="81" />
+          <entry key="Python" value="8486" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
           <entry key="png" value="6" />
-          <entry key="py" value="34" />
+          <entry key="py" value="37" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -52,7 +69,7 @@
           <entry key="Image" value="6" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="34" />
+          <entry key="Python" value="37" />
         </counts>
       </usages-collector>
     </session>
@@ -62,24 +79,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/muehle.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Muehle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+            <state relative-caret-position="389">
+              <caret line="117" selection-start-line="117" selection-end-line="117" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1541530044367" expanded="true" signature="840:893" ph="..." />
-                <marker date="1541530044367" expanded="true" signature="4466:4467" ph="..." />
-                <marker date="1541530044367" expanded="true" signature="4466:4471" ph="..." />
-                <marker date="1541530044367" expanded="true" signature="4942:5177" ph="..." />
+                <marker date="1541842901826" expanded="true" signature="433:435" ph="..." />
+                <marker date="1541842901826" expanded="true" signature="459:527" ph="..." />
+                <marker date="1541842901826" expanded="true" signature="1042:1101" ph="..." />
+                <marker date="1541842901826" expanded="true" signature="1876:1881" ph="..." />
+                <marker date="1541842901826" expanded="true" signature="2678:2686" ph="..." />
+                <marker date="1541842901826" expanded="true" signature="2893:2894" ph="..." />
+                <marker date="1541842901826" expanded="true" signature="2893:2901" ph="..." />
+                <marker date="1541842901826" expanded="true" signature="3382:3391" ph="..." />
+                <marker date="1541842901826" expanded="true" signature="3382:3640" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="13" selection-start-line="9" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/VARIABLES.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="52" selection-end-column="55" />
+              <folding>
+                <marker date="1541842661882" expanded="true" signature="16:17" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+        <entry file="file://$PROJECT_DIR$/src/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="15">
@@ -91,32 +134,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ai/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/click.py">
+        <entry file="file://$PROJECT_DIR$/src/click.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="54" />
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tes.py">
+        <entry file="file://$PROJECT_DIR$/src/grid.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="13" selection-start-line="9" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grid.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -126,26 +155,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/muehle-1-spielfeld.png">
+        <entry file="file://$PROJECT_DIR$/res/muehle-1-spielfeld.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mühle.png">
+        <entry file="file://$PROJECT_DIR$/res/mühle.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+        <entry file="file://$PROJECT_DIR$/src/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <marker date="1541845191825" expanded="true" signature="2054:2122" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+        <entry file="file://$PROJECT_DIR$/src/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="780">
               <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
@@ -198,14 +230,19 @@
         <option value="$PROJECT_DIR$/AI.py" />
         <option value="$PROJECT_DIR$/click.py" />
         <option value="$PROJECT_DIR$/muehle.py" />
+        <option value="$PROJECT_DIR$/Muehle.py" />
+        <option value="$PROJECT_DIR$/src/main.py" />
+        <option value="$PROJECT_DIR$/src/VARIABLES.py" />
+        <option value="$PROJECT_DIR$/src/Muehle.py" />
+        <option value="$PROJECT_DIR$/src/Main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1565" />
-    <option name="y" value="42" />
-    <option name="width" value="1910" />
-    <option name="height" value="840" />
+    <option name="x" value="1920" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -230,7 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,16 +277,31 @@
             <path>
               <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
-              <item name="ai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="untitled" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="untitled" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -264,28 +315,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.muehle">
-    <configuration name="AI" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AI.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.tes">
     <configuration name="click" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -298,7 +328,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/click.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/click.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="grid" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/grid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -319,7 +370,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -340,7 +391,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/muehle.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Muehle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -361,7 +412,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/tes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -372,18 +423,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.muehle" />
-      <item itemvalue="Python.AI" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.tes" />
       <item itemvalue="Python.click" />
+      <item itemvalue="Python.grid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tes" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.grid" />
         <item itemvalue="Python.muehle" />
         <item itemvalue="Python.click" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.tes" />
-        <item itemvalue="Python.AI" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540156882185</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="recognizes mills">
+      <created>1541530053175</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541530053175</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -431,13 +489,13 @@
       <window_info id="Favorites" order="2" sideWeight="0.50149703" side_tool="true" weight="0.20980495" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49551925" weight="0.30042017" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49551925" visible="true" weight="0.30042017" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49973643" weight="0.39810926" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32914045" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49818447" weight="0.3279396" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49818447" weight="0.3277311" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5044808" side_tool="true" weight="0.3092243" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -445,18 +503,18 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49924126" visible="true" weight="0.20980495" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49924126" visible="true" weight="0.20980495" />
       <window_info id="Structure" order="1" sideWeight="0.5007587" side_tool="true" weight="0.20980495" />
       <window_info id="Favorites" order="2" sideWeight="0.50149703" side_tool="true" weight="0.20980495" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49551925" visible="true" weight="0.3092243" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49973643" weight="0.39937106" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49551925" visible="true" weight="0.30042017" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49973643" weight="0.39810926" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49818447" weight="0.32912844" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32914045" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49818447" weight="0.3277311" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5044808" side_tool="true" weight="0.3092243" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -475,49 +533,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/muehle.py</url>
-          <line>126</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/click.py</url>
+          <url>file://$PROJECT_DIR$/src/click.py</url>
           <line>10</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/click.py</url>
+          <url>file://$PROJECT_DIR$/src/click.py</url>
           <line>13</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/muehle.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/muehle.py</url>
+          <url>file://$PROJECT_DIR$/src/Muehle.py</url>
           <line>27</line>
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/muehle.py</url>
+          <url>file://$PROJECT_DIR$/src/Muehle.py</url>
           <line>28</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/muehle.py</url>
-          <line>153</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/muehle.py</url>
-          <line>154</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/muehle.py</url>
-          <line>155</line>
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -544,13 +577,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ai/tensorflow_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ai/tensorflow_test.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -565,7 +592,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konzept.txt">
+    <entry file="file://$PROJECT_DIR$/src/konzept.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="6" selection-end-column="6" />
@@ -579,28 +606,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AI.py">
+    <entry file="file://$PROJECT_DIR$/ai/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/src/AI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="645">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/muehle.py">
+    <entry file="file://$PROJECT_DIR$/src/click.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1541530044367" expanded="true" signature="840:893" ph="..." />
-            <marker date="1541530044367" expanded="true" signature="4466:4467" ph="..." />
-            <marker date="1541530044367" expanded="true" signature="4466:4471" ph="..." />
-            <marker date="1541530044367" expanded="true" signature="4942:5177" ph="..." />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="15">
@@ -610,26 +638,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ai/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/click.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tes.py">
+    <entry file="file://$PROJECT_DIR$/src/grid.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -637,23 +648,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/muehle-1-spielfeld.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mühle.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/src/VARIABLES.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state>
+          <caret selection-end-line="52" selection-end-column="55" />
+          <folding>
+            <marker date="1541842661882" expanded="true" signature="16:17" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/res/mühle.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/muehle-1-spielfeld.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <marker date="1541845191825" expanded="true" signature="2054:2122" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Muehle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1541842901826" expanded="true" signature="433:435" ph="..." />
+            <marker date="1541842901826" expanded="true" signature="459:527" ph="..." />
+            <marker date="1541842901826" expanded="true" signature="1042:1101" ph="..." />
+            <marker date="1541842901826" expanded="true" signature="1876:1881" ph="..." />
+            <marker date="1541842901826" expanded="true" signature="2678:2686" ph="..." />
+            <marker date="1541842901826" expanded="true" signature="2893:2894" ph="..." />
+            <marker date="1541842901826" expanded="true" signature="2893:2901" ph="..." />
+            <marker date="1541842901826" expanded="true" signature="3382:3391" ph="..." />
+            <marker date="1541842901826" expanded="true" signature="3382:3640" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-end-line="10" />
         </state>
       </provider>
     </entry>

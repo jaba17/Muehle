@@ -2,27 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f27039d-877c-4173-a1f7-e86f7a99063b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SetPoints.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VARIABLES.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/AI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai/tensorflow_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/click.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/click.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/konzept.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/konzept.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muehle-1-spielfeld.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/muehle-1-spielfeld.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muehle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Muehle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mühle.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/mühle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/CheckSetPoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Muehle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Muehle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/konzept.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/konzept.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/VARIABLES.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="382">
+                    <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+                    <folding>
+                      <marker date="1541865721646" expanded="true" signature="16:17" ph="..." />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1014959658">
@@ -31,8 +46,8 @@
           <entry key="project.closed" value="29" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.10" value="6" />
-          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.10" value="7" />
+          <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
@@ -40,36 +55,38 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="8" />
-          <entry key="project.opened" value="32" />
+          <entry key="project.opened" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="19" />
-          <entry key="py" value="8486" />
-          <entry key="txt" value="62" />
+          <entry key="dummy" value="40" />
+          <entry key="md" value="12" />
+          <entry key="py" value="11170" />
+          <entry key="txt" value="513" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="81" />
-          <entry key="Python" value="8486" />
+          <entry key="Markdown" value="12" />
+          <entry key="PLAIN_TEXT" value="553" />
+          <entry key="Python" value="11170" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
           <entry key="png" value="6" />
-          <entry key="py" value="37" />
-          <entry key="txt" value="1" />
+          <entry key="py" value="43" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="6" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="37" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="43" />
         </counts>
       </usages-collector>
     </session>
@@ -80,27 +97,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Muehle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="117" selection-start-line="117" selection-end-line="117" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-                <marker date="1541842901826" expanded="true" signature="433:435" ph="..." />
-                <marker date="1541842901826" expanded="true" signature="459:527" ph="..." />
-                <marker date="1541842901826" expanded="true" signature="1042:1101" ph="..." />
-                <marker date="1541842901826" expanded="true" signature="1876:1881" ph="..." />
-                <marker date="1541842901826" expanded="true" signature="2678:2686" ph="..." />
-                <marker date="1541842901826" expanded="true" signature="2893:2894" ph="..." />
-                <marker date="1541842901826" expanded="true" signature="2893:2901" ph="..." />
-                <marker date="1541842901826" expanded="true" signature="3382:3391" ph="..." />
-                <marker date="1541842901826" expanded="true" signature="3382:3640" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tes.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -110,25 +106,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VARIABLES.py">
+        <entry file="file://$PROJECT_DIR$/src/konzept.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="52" selection-end-column="55" />
-              <folding>
-                <marker date="1541842661882" expanded="true" signature="16:17" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" selection-start-line="1" selection-end-line="1" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -155,8 +136,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/muehle-1-spielfeld.png">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/src/CheckSetPoints.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="140" column="37" lean-forward="true" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
+              <folding>
+                <marker date="1541863137375" expanded="true" signature="47:288" ph="..." />
+                <marker date="1541863137375" expanded="true" signature="596:597" ph="..." />
+                <marker date="1541863137375" expanded="true" signature="596:601" ph="..." />
+                <marker date="1541863137375" expanded="true" signature="651:656" ph="..." />
+                <marker date="1541863137375" expanded="true" signature="2716:2721" ph="..." />
+                <marker date="1541863137375" expanded="true" signature="3034:3039" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SetPoints.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+                <marker date="1541865674367" expanded="true" signature="67:68" ph="..." />
+                <marker date="1541865674367" expanded="true" signature="356:365" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding>
+                <marker date="1541865300419" expanded="true" signature="16:17" ph="..." />
+                <marker date="1541865300419" expanded="true" signature="16:18" ph="..." />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -167,10 +187,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="30">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
-                <marker date="1541845191825" expanded="true" signature="2054:2122" ph="..." />
+                <element signature="e#18#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,8 +199,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+            <state relative-caret-position="675">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -206,12 +226,15 @@
       <find>showSetted</find>
       <find>drawClickOverlay</find>
       <find>1</find>
+      <find>point_location</find>
+      <find>comparison_mills_h</find>
     </findStrings>
     <replaceStrings>
       <replace>-1</replace>
       <replace>0</replace>
       <replace>&quot;-&quot;</replace>
       <replace>&quot;&quot;</replace>
+      <replace>comparison_mills_v</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -232,9 +255,15 @@
         <option value="$PROJECT_DIR$/muehle.py" />
         <option value="$PROJECT_DIR$/Muehle.py" />
         <option value="$PROJECT_DIR$/src/main.py" />
-        <option value="$PROJECT_DIR$/src/VARIABLES.py" />
-        <option value="$PROJECT_DIR$/src/Muehle.py" />
+        <option value="$PROJECT_DIR$/src/README.md" />
         <option value="$PROJECT_DIR$/src/Main.py" />
+        <option value="$PROJECT_DIR$/src/Muehle.py" />
+        <option value="$PROJECT_DIR$/src/konzept.txt" />
+        <option value="$PROJECT_DIR$/src/CheckSetPoints.py" />
+        <option value="$PROJECT_DIR$/src/functions.py" />
+        <option value="$PROJECT_DIR$/src/Functions.py" />
+        <option value="$PROJECT_DIR$/src/SetPoints.py" />
+        <option value="$PROJECT_DIR$/src/VARIABLES.py" />
       </list>
     </option>
   </component>
@@ -315,29 +344,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tes">
-    <configuration name="click" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/click.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="grid" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.SetPoints">
+    <configuration name="CheckSetPoints" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -349,7 +357,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/grid.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/CheckSetPoints.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SetPoints" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/SetPoints.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VARIABLES" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/VARIABLES.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -400,41 +450,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tes" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/tes.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.muehle" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.tes" />
-      <item itemvalue="Python.click" />
-      <item itemvalue="Python.grid" />
+      <item itemvalue="Python.VARIABLES" />
+      <item itemvalue="Python.CheckSetPoints" />
+      <item itemvalue="Python.SetPoints" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tes" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.grid" />
+        <item itemvalue="Python.SetPoints" />
+        <item itemvalue="Python.CheckSetPoints" />
         <item itemvalue="Python.muehle" />
-        <item itemvalue="Python.click" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.VARIABLES" />
       </list>
     </recent_temporary>
   </component>
@@ -477,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541530053175</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="recognizes mills">
+      <created>1541845261955</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541845261955</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -489,8 +525,8 @@
       <window_info id="Favorites" order="2" sideWeight="0.50149703" side_tool="true" weight="0.20980495" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49551925" visible="true" weight="0.30042017" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49973643" weight="0.39810926" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49551925" weight="0.30042017" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49973643" visible="true" weight="0.39810926" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -544,13 +580,53 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Muehle.py</url>
-          <line>27</line>
+          <line>24</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Muehle.py</url>
-          <line>28</line>
+          <line>25</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/CheckSetPoints.py</url>
+          <line>123</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/CheckSetPoints.py</url>
+          <line>192</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/CheckSetPoints.py</url>
+          <line>193</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/CheckSetPoints.py</url>
+          <line>194</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/CheckSetPoints.py</url>
+          <line>195</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/CheckSetPoints.py</url>
+          <line>173</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/SetPoints.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/SetPoints.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -592,13 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/konzept.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -607,10 +676,40 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ai/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/src/AI.py">
+    <entry file="file://$PROJECT_DIR$/res/muehle-1-spielfeld.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Muehle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="90">
+          <caret line="6" column="20" selection-start-line="6" selection-end-line="7" />
+          <folding>
+            <marker date="1541851649620" expanded="true" signature="430:432" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/konzept.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -621,20 +720,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
+    <entry file="file://$PROJECT_DIR$/res/mühle.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="30">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#18#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
@@ -650,53 +752,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VARIABLES.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="52" selection-end-column="55" />
+        <state relative-caret-position="382">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
           <folding>
-            <marker date="1541842661882" expanded="true" signature="16:17" ph="..." />
+            <marker date="1541865721646" expanded="true" signature="16:17" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/mühle.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/muehle-1-spielfeld.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.py">
+    <entry file="file://$PROJECT_DIR$/src/CheckSetPoints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="120">
+          <caret line="140" column="37" lean-forward="true" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
           <folding>
-            <marker date="1541845191825" expanded="true" signature="2054:2122" ph="..." />
+            <marker date="1541863137375" expanded="true" signature="47:288" ph="..." />
+            <marker date="1541863137375" expanded="true" signature="596:597" ph="..." />
+            <marker date="1541863137375" expanded="true" signature="596:601" ph="..." />
+            <marker date="1541863137375" expanded="true" signature="651:656" ph="..." />
+            <marker date="1541863137375" expanded="true" signature="2716:2721" ph="..." />
+            <marker date="1541863137375" expanded="true" signature="3034:3039" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Muehle.py">
+    <entry file="file://$PROJECT_DIR$/src/SetPoints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1541842901826" expanded="true" signature="433:435" ph="..." />
-            <marker date="1541842901826" expanded="true" signature="459:527" ph="..." />
-            <marker date="1541842901826" expanded="true" signature="1042:1101" ph="..." />
-            <marker date="1541842901826" expanded="true" signature="1876:1881" ph="..." />
-            <marker date="1541842901826" expanded="true" signature="2678:2686" ph="..." />
-            <marker date="1541842901826" expanded="true" signature="2893:2894" ph="..." />
-            <marker date="1541842901826" expanded="true" signature="2893:2901" ph="..." />
-            <marker date="1541842901826" expanded="true" signature="3382:3391" ph="..." />
-            <marker date="1541842901826" expanded="true" signature="3382:3640" ph="..." />
+            <element signature="e#0#23#0" expanded="true" />
+            <marker date="1541865674367" expanded="true" signature="67:68" ph="..." />
+            <marker date="1541865674367" expanded="true" signature="356:365" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tes.py">
+    <entry file="file://$PROJECT_DIR$/src/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-end-line="10" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <marker date="1541865300419" expanded="true" signature="16:17" ph="..." />
+            <marker date="1541865300419" expanded="true" signature="16:18" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

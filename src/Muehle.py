@@ -6,7 +6,6 @@ from PIL import ImageTk
 
 from VARIABLES import *
 
-
 num_pieces = 9
 task = ""
 active_player = TRUE
@@ -19,50 +18,12 @@ image_tk = ImageTk.PhotoImage(image)
 canvas.create_image(2, 2, image=image_tk, anchor=NW)
 
 
-
-
 class Muehle:
 
     def __init__(self):
 
         print("Welcoime to muehle")
         self.setupBoard()
-
-    def onObjectClick(self, event):
-        # print('Clicked', event.x, event.y, event.widget)
-        id = event.widget.find_closest(event.x, event.y)[0]
-        # if id:
-        #setPointAsClicked(id)
-
-    def setPointAsClicked(self, number):
-        counter = 0
-        for r in range(len(pieces)):
-            for s in range(len(pieces[r])):
-                if pieces[r][s] != "-":
-                    counter += 1
-                    if counter == number:
-                        print(str(r) + " " + str(s))
-
-    def hide_me(event):
-        event.widget.pack_forget()
-
-    def drawClickOverlay(grid):
-        for r in range(7):
-            for s in range(7):
-                if grid[r][s] == 1:
-                    click_element = canvas.create_oval(point_location[s], point_location[r],
-                                                       point_location[s] + 40,
-                                                       point_location[r] + 40, width=6, fill='black')
-                    #canvas.tag_bind(click_element, "<Button-1>", onObjectClick)
-
-
-# entryBox = tkinter.Entry(canvas)
-# entryBox.grid(row=2, column=1)
-
-# for r in range(7):
-#     for c in range(7):
-#         label = tkinter.Label(canvas, text='R%s/C%s' % (r, c),
-#                               borderwidth=1, background="black").grid(row=r, column=c)
 
     def setupBoard(self):
         piece_display = tkinter.Label(canvas, text="Anzahl der Steine: " + str(num_pieces))
@@ -77,50 +38,84 @@ class Muehle:
         player_display.place(x=500, y=950)
         player_display.pack_propagate()
 
+    # for r in range(7):
+    #    for s in range(len(location_set[r])):
+    #        if (location_set[r][s] == 1):
+    #            x_loc = point_location[s]
+    #            y_loc = point_location[r]
+    #            canvas.create_oval(x_loc, y_loc, x_loc + 60, y_loc + 60, width=2, fill='black')
 
+    def onObjectClick(self, event):
+        # print('Clicked', event.x, event.y, event.widget)
+        id = event.widget.find_closest(event.x, event.y)[0]
+        # if id:
+        # setPointAsClicked(id)
 
-# for r in range(7):
-#    for s in range(len(location_set[r])):
-#        if (location_set[r][s] == 1):
-#            x_loc = point_location[s]
-#            y_loc = point_location[r]
-#            canvas.create_oval(x_loc, y_loc, x_loc + 60, y_loc + 60, width=2, fill='black')
+    def setPointAsClicked(self, number):
+        counter = 0
+        for r in range(len(VARIABLES.pieces)):
+            for s in range(len(VARIABLES.pieces[r])):
+                if VARIABLES.pieces[r][s] != "-":
+                    counter += 1
+                    if counter == number:
+                        print(str(r) + " " + str(s))
 
+    def hide_me(event):
+        event.widget.pack_forget()
 
-    def locationClicked(event, x, y):
+    def drawClickOverlay(grid):
+        for r in range(7):
+            for s in range(7):
+                if grid[r][s] == 1:
+                    click_element = canvas.create_oval(VARIABLES.point_location[s],
+                                                       VARIABLES.point_location[r],
+                                                       VARIABLES.point_location[s] + 40,
+                                                       VARIABLES.point_location[r] + 40, width=6, fill='black')
+                    # canvas.tag_bind(click_element, "<Button-1>", onObjectClick)
+
+    # entryBox = tkinter.Entry(canvas)
+    # entryBox.grid(row=2, column=1)
+
+    # for r in range(7):
+    #     for c in range(7):
+    #         label = tkinter.Label(canvas, text='R%s/C%s' % (r, c),
+    #                               borderwidth=1, background="black").grid(row=r, column=c)
+
+    def locationClicked(self, event, x, y):
         print("X_Location: " + str(x))
         print("Y_Location: " + str(y))
         print("------------------------")
         # print(event.widget.find_closest(event.x, event.y))
 
-
     def showSettedPoints(grid):
-       for r in range(7):
-          for s in range(7):
-               if grid[r][s] == 1:
-                 click_canvas = canvas.create_oval(point_location[s] + 10, point_location[r] + 10,
-                                                  point_location[s] + 40,
-                                                  point_location[r] + 40, width=2, fill='black')
+        for r in range(7):
+            for s in range(7):
+                if grid[r][s] == 1:
+                    click_canvas = canvas.create_oval(VARIABLES.point_location[s] + 10,
+                                                      VARIABLES.point_location[r] + 10,
+                                                      VARIABLES.point_location[s] + 40,
+                                                      VARIABLES.point_location[r] + 40, width=2, fill='black')
 
         # canvas.tag_bind(click_canvas, '<ButtonPress-1>', locationClicked(e, x=s, y=r))
 
-
     def movePoint(point_x, point_y):
         for r in range(7):
-           for s in range(7):
-                if location_set[r][s] == 1:
+            for s in range(7):
+                if VARIABLES.location_set[r][s] == 1:
                     if point_y == r and point_x == s:
-                        muehle_grid[r][s] = 0
-                        muehle_grid[s - 2][r - 1] = 1
+                        VARIABLES.muehle_grid[r][s] = 0
+                        VARIABLES.muehle_grid[s - 2][r - 1] = 1
 
-
-# drawClickOverlay(full_muehle_grid)
+    # drawClickOverlay(full_muehle_grid)
     movePoint(3, 2)
-    showSettedPoints(muehle_grid)
+    showSettedPoints(VARIABLES.muehle_grid)
 
-    #if active_player == TRUE:
-        #player_display["text"] = "Aktiver Spieler: Du"
+    # if active_player == TRUE:
+    # player_display["text"] = "Aktiver Spieler: Du"
 
     canvas.pack(expand=YES, fill=BOTH)
+
+
+m = Muehle()
 
 mainloop()

@@ -1,2 +1,18 @@
 matrix wird mit switch geprüft
     ->
+
+
+
+
+
+
+
+Schreibweisen:
+
+Spielsteine: Spielsteine werden als x/y -Koordinaten beschrieben. Also z.B.
+             (3/1), oder [3, 1] als Array.
+
+Mühle: Bei Mühlen werden die Koodinaten des ersten und des letzten Steines angegeben.
+       Folglich ist eine Mühle, die aus den drei Steines (0/0), (0/3) und (0/6) gebildet wurde (0/0)(0/6),
+       oder [[0, 0], [0, 6]] als Array.
+

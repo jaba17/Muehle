@@ -4,6 +4,7 @@ from tkinter import *
 from PIL import Image
 from PIL import ImageTk
 
+from AI.AI import AI
 from AI.SetRound import SetRound
 from VARIABLES import *
 
@@ -12,7 +13,7 @@ active_player = TRUE
 
 canvas = Canvas(width=900, height=1000, bg='white')
 canvas.grid()
-image = Image.open("res/muehle-1-spielfeld.png")
+image = Image.open("res/muehle_spielbrett.png")
 image = image.resize((900, 900))
 image_tk = ImageTk.PhotoImage(image)
 canvas.create_image(2, 2, image=image_tk, anchor=NW)
@@ -51,16 +52,17 @@ class Muehle:
         y = event.y - 25  # if id:
         print(str(x) + " " + str(y))
 
-        y_index = self.getIndFromCoord(y)
-        x_index = self.getIndFromCoord(x)
+        y_index = self.getIndexFromCoord(y)
+        x_index = self.getIndexFromCoord(x)
 
         if VARIABLES.muehle_grid[y_index][x_index] == 1 and VARIABLES.pieces[y_index][x_index] == "":
             self.setPoint(y_index, x_index, "P")
             self.num_pieces -= 1
-            self.game()
+            self.showSettedPoints(VARIABLES.pieces)
+            threading.Timer(2, self.game).start()
         # setPointAsClicked(id)
 
-    def getIndFromCoord(self, coord):
+    def getIndexFromCoord(self, coord):
         index = 0
 
         loc = VARIABLES.point_location
@@ -71,13 +73,8 @@ class Muehle:
         return index
 
     def game(self):
-        self.showSettedPoints(VARIABLES.pieces)
-        threading.Timer(2, self.test).start()
 
-        # time.sleep(2)
-
-    def test(self):
-        SetRound.setPoint()
+        AI.__init__()
         self.showSettedPoints(VARIABLES.pieces)
 
     def setPoint(self, y_index, x_index, player):
@@ -103,19 +100,12 @@ class Muehle:
                 if grid[r][s] == 1:
                     canvas.bind("<Button-1>", self.onObjectClick)
 
-    # entryBox = tkinter.Entry(canvas)
-    # entryBox.grid(row=2, column=1)
-
-    # for r in range(7):
-    #     for c in range(7):
-    #         label = tkinter.Label(canvas, text='R%s/C%s' % (r, c),
-    #                               borderwidth=1, background="black").grid(row=r, column=c)
-
     def locationClicked(self, event, x, y):
         print("X_Location: " + str(x))
         print("Y_Location: " + str(y))
         print("------------------------")
         # print(event.widget.find_closest(event.x, event.y))
+
 
     def showSettedPoints(self, grid):
 
@@ -134,14 +124,6 @@ class Muehle:
                                        VARIABLES.point_location[r] + 40, width=3.5, fill='white')
 
         # canvas.tag_bind(click_canvas, '<ButtonPress-1>', locationClicked(e, x=s, y=r))
-
-    def movePoint(self, point_x, point_y):
-        for r in range(7):
-            for s in range(7):
-                if VARIABLES.location_set[r][s] == 1:
-                    if point_y == r and point_x == s:
-                        VARIABLES.muehle_grid[r][s] = 0
-                        VARIABLES.muehle_grid[s - 2][r - 1] = 1
 
     # drawClickOverlay(full_muehle_grid)
     # movePoint(3, 2)

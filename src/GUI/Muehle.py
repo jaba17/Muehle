@@ -1,3 +1,4 @@
+import threading
 import tkinter
 from tkinter import *
 from PIL import Image
@@ -48,28 +49,34 @@ class Muehle:
         x = event.x - 25
         y = event.y - 25  # if id:
         print(str(x) + " " + str(y))
-        x_index = 0
-        y_index = 0
 
-        for s in range(7):
-            if loc[s] - 20 < x < loc[s] + 20:
-                y_index = s
+        y_index = self.getIndFromCoord(y)
+        x_index = self.getIndFromCoord(x)
 
-                # if loc[s] - 20 < x < loc[s] + 20:
-                # y_index = s
 
         if VARIABLES.muehle_grid[y_index][x_index] == 1:
             self.setPoint(y_index, x_index, "P")
             self.game()
         # setPointAsClicked(id)
 
+    def getIndFromCoord(self, coord):
+        index = 0
+
+        loc = VARIABLES.point_location
+
+
+        for r in range(7):
+            if loc[r] - 20 < coord < loc[r] + 20:
+                index = r
+        return index
+
     def game(self):
         self.showSettedPoints(VARIABLES.pieces)
-
+        threading.Timer(5, self.test).start()
         # time.sleep(2)
 
-        self.setPoint(0, 3, "C")
-
+    def test(self):
+        self.setPoint(0, 0, "C")
         self.showSettedPoints(VARIABLES.pieces)
 
     def setPoint(self, y_index, x_index, player):
@@ -87,9 +94,6 @@ class Muehle:
                     counter += 1
                     if counter == number:
                         print(str(r) + " " + str(s))
-
-    def hide_me(self, event):
-        event.widget.pack_forget()
 
     # https://stackoverflow.com/questions/9581384/how-to-create-a-transparent-rectangle-responding-to-click-event-in-tkinter
     def drawClickOverlay(self, grid):

@@ -2,3 +2,9 @@
 
 Wenn möglich: In die Ecken setzen
 Prüfen, ob der Spieler zwei Steine in eine Reihe gesetzt hat
+
+
+
+2) Schieben:
+
+Umgebende Felder überprüfen

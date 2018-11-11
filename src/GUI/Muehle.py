@@ -4,9 +4,9 @@ from tkinter import *
 from PIL import Image
 from PIL import ImageTk
 
+from AI.SetRound import SetRound
 from VARIABLES import *
 
-num_pieces = 9
 task = ""
 active_player = TRUE
 
@@ -22,13 +22,14 @@ class Muehle:
 
     def __init__(self):
 
+        self.num_pieces = 9
         print("Welcoime to muehle")
         self.setupBoard()
 
-        mainloop()
+        canvas.mainloop()
 
     def setupBoard(self):
-        piece_display = tkinter.Label(canvas, text="Anzahl der Steine: " + str(num_pieces))
+        piece_display = tkinter.Label(canvas, text="Anzahl der Steine: " + str(self.num_pieces))
         piece_display.place(x=100, y=950)
         piece_display.pack_propagate()
 
@@ -53,9 +54,9 @@ class Muehle:
         y_index = self.getIndFromCoord(y)
         x_index = self.getIndFromCoord(x)
 
-
-        if VARIABLES.muehle_grid[y_index][x_index] == 1:
+        if VARIABLES.muehle_grid[y_index][x_index] == 1 and VARIABLES.pieces[y_index][x_index] == "":
             self.setPoint(y_index, x_index, "P")
+            self.num_pieces -= 1
             self.game()
         # setPointAsClicked(id)
 
@@ -64,7 +65,6 @@ class Muehle:
 
         loc = VARIABLES.point_location
 
-
         for r in range(7):
             if loc[r] - 20 < coord < loc[r] + 20:
                 index = r
@@ -72,11 +72,12 @@ class Muehle:
 
     def game(self):
         self.showSettedPoints(VARIABLES.pieces)
-        threading.Timer(5, self.test).start()
+        threading.Timer(2, self.test).start()
+
         # time.sleep(2)
 
     def test(self):
-        self.setPoint(0, 0, "C")
+        SetRound.setPoint()
         self.showSettedPoints(VARIABLES.pieces)
 
     def setPoint(self, y_index, x_index, player):

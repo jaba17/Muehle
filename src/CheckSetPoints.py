@@ -97,7 +97,8 @@ class CheckSetPoints:
 
     # Beschreibt gesetzten Spielsteine (P = Spieler, C = Computer) sowie deren x und y Werte
 
-    def describeBoard(self, mat):
+    @staticmethod
+    def describeBoard(mat):
         board_array = []
         i = 4
 
@@ -107,6 +108,8 @@ class CheckSetPoints:
                     board_array.append([mat[r][s], r, s])
                     #   board_array[i] = board_array[i] = [mat[r][s], r, s]
                     i += 1
+
+        VARIABLES.points = board_array
         return board_array
 
     def convertMatrix(self, mat):

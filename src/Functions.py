@@ -7,7 +7,8 @@ class Functions:
         self.checkNeighbours(2, 3)
 
     # beschreibt die Steine, welche sich auf dem Brett befinden in der jeweiligen Schreibweise (siehe Konzept)
-    def describeBoard(self, mat):
+    @staticmethod
+    def describeBoard(mat):
         board_array = []
         i = 4
 
@@ -19,7 +20,8 @@ class Functions:
                     i += 1
         return board_array
 
-    def locIsPossible(self, x_koord, y_koord):
+    @staticmethod
+    def locIsPossible(y_koord, x_koord):
         if VARIABLES.pieces[y_koord][x_koord] == "":
             return True
         else:
@@ -91,5 +93,3 @@ class Functions:
         print(returnvalue)
         return returnvalue
 
-
-var = Functions()

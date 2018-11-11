@@ -1,5 +1,3 @@
-
-
 class VARIABLES:
     cleaned_location_set = [[1, 0, 0],
                             [0, 1, 0, 0, 0],
@@ -80,3 +78,5 @@ class VARIABLES:
                       [[0, 6], [3, 6], [6, 6]]]
 
     mills = []
+
+    points = []

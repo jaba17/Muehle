@@ -6,6 +6,10 @@ Ablauf:
    Zeichnen des Spielbrettes
    Verarbeiten des Klickens und Speichern in Arrays (welche sich in VARIABLES.py befinden)
 4) Aufrufen der AI
+5) Runden:
+    Setzen (SetRound)
+    Bewegen (MoveRound)
+    Springen (JumpRound)
 
 
 

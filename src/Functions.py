@@ -1,4 +1,4 @@
-from VARIABLES import *
+from core.VARIABLES import *
 
 
 class Functions:

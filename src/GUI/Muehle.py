@@ -5,8 +5,7 @@ from PIL import Image
 from PIL import ImageTk
 
 from AI.AI import AI
-from AI.SetRound import SetRound
-from VARIABLES import *
+from core.VARIABLES import *
 
 task = ""
 active_player = TRUE
@@ -23,7 +22,7 @@ class Muehle:
 
     def __init__(self):
 
-        self.num_pieces = 9
+        self.num_pieces = 6
         print("Welcoime to muehle")
         self.setupBoard()
 
@@ -42,25 +41,44 @@ class Muehle:
         player_display.place(x=500, y=950)
         player_display.pack_propagate()
 
-        self.drawClickOverlay(VARIABLES.muehle_grid)
+        self.recognizeClick()
         self.showSettedPoints(VARIABLES.pieces)
+        canvas.mainloop()
 
     def onObjectClick(self, event):
-        print('Clicked', event.x, event.y, event.widget)
-        loc = VARIABLES.point_location
         x = event.x - 25
-        y = event.y - 25  # if id:
-        print(str(x) + " " + str(y))
+        y = event.y - 25
 
         y_index = self.getIndexFromCoord(y)
         x_index = self.getIndexFromCoord(x)
 
-        if VARIABLES.muehle_grid[y_index][x_index] == 1 and VARIABLES.pieces[y_index][x_index] == "":
-            self.setPoint(y_index, x_index, "P")
-            self.num_pieces -= 1
-            self.showSettedPoints(VARIABLES.pieces)
-            threading.Timer(2, self.game).start()
-        # setPointAsClicked(id)
+        # "Setzenmodus"
+        if VARIABLES.gamemode == 1:
+            if VARIABLES.muehle_grid[y_index][x_index] == 1 and VARIABLES.pieces[y_index][x_index] == "":
+                self.setPoint(y_index, x_index, "P")
+                self.num_pieces -= 1
+                self.showSettedPoints(VARIABLES.pieces)
+                threading.Timer(2, self.game).start()
+
+        # "Schiebmodus"
+        if VARIABLES.gamemode == 2:
+            if VARIABLES.pieces[y_index][x_index] == "P":
+                # self.setPoint(y_index, x_index, "P")
+                # self.num_pieces -= 1
+                # self.showSettedPoints(VARIABLES.pieces)
+                # threading.Timer(2, self.game).start()
+                canvas.bind("<Button-1>", self.moveObject)
+                print(x_index)
+
+    def moveObject(self, event):
+        x = event.x - 25
+        y = event.y - 25
+
+        y_index = self.getIndexFromCoord(y)
+        x_index = self.getIndexFromCoord(x)
+
+        print("move object "+str(y_index))
+
 
     def getIndexFromCoord(self, coord):
         index = 0
@@ -73,39 +91,21 @@ class Muehle:
         return index
 
     def game(self):
+        print()
+        # Übergibt an die KI
+            # AI.gameSet()
 
-        AI.__init__()
-        self.showSettedPoints(VARIABLES.pieces)
+#         elif VARIABLES.gamemode == 2:
+  #           print("GameMode2")
+
+        # self.showSettedPoints(VARIABLES.pieces)
 
     def setPoint(self, y_index, x_index, player):
         VARIABLES.pieces[y_index][x_index] = player
         print(VARIABLES.pieces)
 
-    def drawPoint(self, x_index, y_index, player):
-        canvas.create_oval()
-
-    def setPointAsClicked(self, number):
-        counter = 0
-        for r in range(len(VARIABLES.pieces)):
-            for s in range(len(VARIABLES.pieces[r])):
-                if VARIABLES.pieces[r][s] != "-":
-                    counter += 1
-                    if counter == number:
-                        print(str(r) + " " + str(s))
-
-    # https://stackoverflow.com/questions/9581384/how-to-create-a-transparent-rectangle-responding-to-click-event-in-tkinter
-    def drawClickOverlay(self, grid):
-        for r in range(7):
-            for s in range(7):
-                if grid[r][s] == 1:
-                    canvas.bind("<Button-1>", self.onObjectClick)
-
-    def locationClicked(self, event, x, y):
-        print("X_Location: " + str(x))
-        print("Y_Location: " + str(y))
-        print("------------------------")
-        # print(event.widget.find_closest(event.x, event.y))
-
+    def recognizeClick(self):
+        canvas.bind("<Button-1>", self.onObjectClick)
 
     def showSettedPoints(self, grid):
 
@@ -123,14 +123,6 @@ class Muehle:
                                        VARIABLES.point_location[s] + 40,
                                        VARIABLES.point_location[r] + 40, width=3.5, fill='white')
 
-        # canvas.tag_bind(click_canvas, '<ButtonPress-1>', locationClicked(e, x=s, y=r))
-
-    # drawClickOverlay(full_muehle_grid)
-    # movePoint(3, 2)
-    # showSettedPoints(VARIABLES.muehle_grid)
-
-    # if active_player == TRUE:
-    # player_display["text"] = "Aktiver Spieler: Du"
 
     canvas.pack(expand=YES, fill=BOTH)
 

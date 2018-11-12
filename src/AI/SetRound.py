@@ -1,6 +1,5 @@
 from random import randint
 
-from VARIABLES import *
 from Functions import *
 
 
@@ -49,6 +48,16 @@ def recognizePossibleMills():
     return possible_mills
 
 
+def setPointAsClicked(number):
+    counter = 0
+    for r in range(len(VARIABLES.pieces)):
+        for s in range(len(VARIABLES.pieces[r])):
+            if VARIABLES.pieces[r][s] != "-":
+                counter += 1
+                if counter == number:
+                    print(str(r) + " " + str(s))
+
+
 def createMill():
     recognizePossibleMills()
 
@@ -68,53 +77,76 @@ def analyzeEnemyMill():
         if points[r][0] == "P":
             enemy_points.append([points[r][1], points[r][2]])
 
-    for r in range(len(enemy_points)):
-        for s in range(len(VARIABLES.mills_horizontal)):
-            if enemy_points[r] == VARIABLES.mills_horizontal[s][0]:
-                # for s in range(len(VARIABLES.mills_horizontal)):
-                # for t in range(len(VARIABLES.mills_horizontal[s])):
-                # for v in range(len(enemy_points)-1):
-                print(enemy_points[r])
+    print(enemy_points)
 
-        # print(enemy_points)
+    # if points != []:
+    #    for r in range(len(VARIABLES.mills_horizontal)):
+     #        if enemy_points[0] == VARIABLES.mills_horizontal[r][0] and enemy_points[1] == VARIABLES.mills_horizontal[r][1]:
+      #           print("set to the right")
+      #           break
+
+      #       if enemy_points[0] == VARIABLES.mills_horizontal[r][0] and enemy_points[2] == VARIABLES.mills_horizontal[r][2]:
+       #         print("set to the middle")
+
+    # for r in range(len(enemy_points)):
+    # for s in range(len(VARIABLES.mills_horizontal)):
+    # for t in range(len(VARIABLES.mills_horizontal[s])):
+    # if enemy_points[r] == VARIABLES.mills_horizontal[s][t]:
+
+    # for s in range(len(VARIABLES.mills_horizontal)):
+    # for t in range(len(VARIABLES.mills_horizontal[s])):
+    # for v in range(len(enemy_points)-1):
+    #  print(enemy_points[r])
+    # print(enemy_points)
 
 
 def removeEnemyPoint():
     print()
 
 
-class SetRound():
+def checkMill():
+    # Nun werden alle möglichen Mühlen aufgespürt und eine zufällige ausgewählt
+    recognized_mills = recognizePossibleMills()
+    rand_mill = randint(0, len(recognized_mills) - 1)
+    # Falls es mögliche Mühlen gibt werden diese gefüllt.
+    if recognized_mills != "[]":
+        mill = recognized_mills[rand_mill]
+        point = mill[VARIABLES.activeMillIndex]
+        # VARIABLES.pieces[recognized_mills[1][0]][recognized_mills[1][1]] = "C"
+        # VARIABLES.pieces[recognized_mills[2][0]][recognized_mills[2][1]] = "C"
+
+
+    # Anschließend werden Punkte zwischen zwei vorhandenen Mühlen mit einem Punkt
+    if point != [-1, -1]:
+        VARIABLES.pieces[point[0]][point[1]] = "C"
+        VARIABLES.activeMillIndex += 1
+        print(VARIABLES.pieces)
+
+
+class SetRound:
 
     def __init__(self):
         # self.blockEnemyMill()
         # self.createMill()
-        print("df")
+        analyzeEnemyMill()
 
     @staticmethod
     def setPoint():
+
         point = [-1][-1]
-        # Zuerst wird überprüft, ob Ecken frei sind
-        if checkCorner() != [-1, -1]:
-            point = checkCorner()
 
-        recognizedMills = recognizePossibleMills()[1]
-
-        VARIABLES.pieces[recognizedMills[0][0]][recognizedMills[0][1]] = "C"
-        VARIABLES.pieces[recognizedMills[1][0]][recognizedMills[1][1]] = "C"
-        VARIABLES.pieces[recognizedMills[2][0]][recognizedMills[2][1]] = "C"
-
-        # Bei jeder Runde werden zudem mögliche Mühlen des Gegners überprüft
+        # Bei jeder Runde werden zuerst mögliche Mühlen des Gegners überprüft
         # analyzeEnemyMill()
         # Wenn der Gegner fast eine Mühle gebaut hat wird diese verschlossen.
         # TODO: Verschließen
 
-        recognizePossibleMills()
-
-        # Anschließend werden Punkte zwischen zwei vorhandenen Mühlen mit einem Punkt
-
-        if (point != [-1][-1]):
+        # Anschließend wird überprüft, ob Ecken frei sind
+        if checkCorner() != [-1, -1]:
+            # Wemm ja wird dorthin ein Spielstein gesetzt
+            point = checkCorner()
             VARIABLES.pieces[point[0]][point[1]] = "C"
-            print(VARIABLES.pieces)
+
+
 
     # direction = randint(0,1)
     # rand_num = randint(0, len(mills_horizontal + mills_vertical))
@@ -125,6 +157,8 @@ class SetRound():
     #         print(mills_vertical[rand_num])
 
     # nach möglichen Mühlenorten suchen
+
+    # wenn die KI keinen passenden Ort findet, wird ein zufälliger ausgewählt
 
 
 sr = SetRound()

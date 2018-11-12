@@ -5,5 +5,7 @@ class MoveRound:
 
 
 
+
     def jump(self, from_pos, to_pos):
-        if VARIABLES.points[]
+        print()
+        # if VARIABLES.points[]

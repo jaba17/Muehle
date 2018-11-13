@@ -1,13 +1,30 @@
 from core.VARIABLES import *
 
-# Prüft, ob diagonal gezogen werden will
+
+# Prüft, ob diagonal gezogen werden kann
 def isPossible(from_loc, to_loc):
+    returnvalue = False
     if VARIABLES.muehle_grid[to_loc[0]][to_loc[1]] != -1:
 
-        if from_loc[0] == to_loc[0] or from_loc[1] == to_loc[1]:
+        if from_loc[0] == to_loc[0]:
+            i = 0
+            while i < to_loc[0]-from_loc[0]:
+                i += 1
             print("Possible")
+
+        if from_loc[1] == to_loc[1]:
+
+            i = 0
+            while i < to_loc[0]-from_loc[0]:
+                i += 1
+
+            if VARIABLES.pieces[to_loc[0]][to_loc[1]]:
+                returnvalue = True
         else:
             print("not possible")
+            returnvalue = False
+
+    return returnvalue
 
 
 class MoveRound:

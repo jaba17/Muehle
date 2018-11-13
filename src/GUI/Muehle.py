@@ -5,6 +5,7 @@ from PIL import Image
 from PIL import ImageTk
 
 from AI.AI import AI
+from core.AnalyzePlayBoard import AnalyzePlayBoard
 from core.VARIABLES import *
 
 task = ""
@@ -23,7 +24,7 @@ class Muehle:
     def __init__(self):
 
         self.num_pieces = 6
-        print("Welcoime to muehle")
+        print("Welcome to muehle")
         self.setupBoard()
 
         canvas.mainloop()
@@ -58,6 +59,7 @@ class Muehle:
                 self.setPoint(y_index, x_index, "P")
                 self.num_pieces -= 1
                 self.showSettedPoints(VARIABLES.pieces)
+                AnalyzePlayBoard()
                 threading.Timer(2, self.game).start()
 
         # "Schiebmodus"
@@ -93,12 +95,12 @@ class Muehle:
     def game(self):
         print()
         # Übergibt an die KI
-            # AI.gameSet()
+        AI.gameSet()
 
 #         elif VARIABLES.gamemode == 2:
   #           print("GameMode2")
 
-        # self.showSettedPoints(VARIABLES.pieces)
+        self.showSettedPoints(VARIABLES.pieces)
 
     def setPoint(self, y_index, x_index, player):
         VARIABLES.pieces[y_index][x_index] = player

@@ -4,6 +4,7 @@ from Functions import *
 
 
 def checkCorner():
+
     returnvalue = [-1, -1]
 
     if VARIABLES.pieces[0][0] == "":
@@ -16,6 +17,13 @@ def checkCorner():
         returnvalue = [6, 0]
 
     return returnvalue
+
+
+def isPossible(point):
+    if VARIABLES.pieces[point[0]][point[1]] == "":
+        return True
+    else:
+        return False
 
 
 def recognizePossibleMills():
@@ -79,14 +87,15 @@ def analyzeEnemyMill():
 
     print(enemy_points)
 
+
     # if points != []:
     #    for r in range(len(VARIABLES.mills_horizontal)):
-     #        if enemy_points[0] == VARIABLES.mills_horizontal[r][0] and enemy_points[1] == VARIABLES.mills_horizontal[r][1]:
-      #           print("set to the right")
-      #           break
+    #        if enemy_points[0] == VARIABLES.mills_horizontal[r][0] and enemy_points[1] == VARIABLES.mills_horizontal[r][1]:
+    #           print("set to the right")
+    #           break
 
-      #       if enemy_points[0] == VARIABLES.mills_horizontal[r][0] and enemy_points[2] == VARIABLES.mills_horizontal[r][2]:
-       #         print("set to the middle")
+    #       if enemy_points[0] == VARIABLES.mills_horizontal[r][0] and enemy_points[2] == VARIABLES.mills_horizontal[r][2]:
+    #         print("set to the middle")
 
     # for r in range(len(enemy_points)):
     # for s in range(len(VARIABLES.mills_horizontal)):
@@ -99,9 +108,14 @@ def analyzeEnemyMill():
     #  print(enemy_points[r])
     # print(enemy_points)
 
-
+# Diese Funktion entfernt einen Stein des Gegners
 def removeEnemyPoint():
-    print()
+
+    # for i in range(len(VARIABLES.pieces)):
+     #    for r in range(len(VARIABLES.pieces[i])):
+     #        if
+
+    print(VARIABLES.mills)
 
 
 def checkMill():
@@ -115,7 +129,6 @@ def checkMill():
         # VARIABLES.pieces[recognized_mills[1][0]][recognized_mills[1][1]] = "C"
         # VARIABLES.pieces[recognized_mills[2][0]][recognized_mills[2][1]] = "C"
 
-
     # Anschließend werden Punkte zwischen zwei vorhandenen Mühlen mit einem Punkt
     if point != [-1, -1]:
         VARIABLES.pieces[point[0]][point[1]] = "C"
@@ -128,7 +141,9 @@ class SetRound:
     def __init__(self):
         # self.blockEnemyMill()
         # self.createMill()
-        analyzeEnemyMill()
+        # analyzeEnemyMill()
+        removeEnemyPoint()
+        checkMill()
 
     @staticmethod
     def setPoint():
@@ -136,7 +151,7 @@ class SetRound:
         point = [-1][-1]
 
         # Bei jeder Runde werden zuerst mögliche Mühlen des Gegners überprüft
-        # analyzeEnemyMill()
+        # if analyzeEnemyMill() ==
         # Wenn der Gegner fast eine Mühle gebaut hat wird diese verschlossen.
         # TODO: Verschließen
 
@@ -146,7 +161,17 @@ class SetRound:
             point = checkCorner()
             VARIABLES.pieces[point[0]][point[1]] = "C"
 
+        # Wenn der Computer nicht mehr weiter weiß setzt er seinen Stein auf ein zufälliges freies Feld
+        else:
+            found = False
 
+            while not found:
+
+                rand_point = [randint(0, 6), randint(0, 6)]
+
+                if isPossible(rand_point):
+                    VARIABLES.pieces[rand_point[0]][rand_point[1]] = "C"
+                    found = True
 
     # direction = randint(0,1)
     # rand_num = randint(0, len(mills_horizontal + mills_vertical))

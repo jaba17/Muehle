@@ -1,3 +1,4 @@
+from Functions import Functions
 from core.VARIABLES import *
 
 
@@ -8,7 +9,8 @@ class CheckSetPoints:
         # checkMatrix(pieces)
 
         locations = self.describeBoard(VARIABLES.pieces)
-        self.checkForMills(locations)
+        # self.checkForMills(locations)
+        Functions.checkForMills(locations)
         # self.convertMatrix(VARIABLES.pieces)
         # self.checkPoints(locations)
 
@@ -17,7 +19,7 @@ class CheckSetPoints:
         print(pnts)
         print("----------------------------------------------")
         print("Mills: ")
-        self.checkForMill(pnts)
+        Functions.checkForMills(pnts)
         print("----------------------------------------------")
 
     def checkForDoubleMill(self, pnts):
@@ -119,80 +121,6 @@ class CheckSetPoints:
                     i = s
                     while mat[r][i] == "-" and i < 7:
                         i += 1
-
-    # Bei dieser Methode wird der
-    def checkForMills(self, pnts):
-        comparison_mills_h = VARIABLES.mills_horizontal
-        comparison_mills_v = VARIABLES.mills_vertical
-
-        # horizontale Prüfung
-        print("Horizontal: ");
-        for m in range(len(comparison_mills_h)):
-            counter = 0
-            x1 = 0
-            y1 = 0
-            x2 = 0
-            y2 = 0
-
-            for r in range(len(pnts)):
-                if pnts[r][0] == "P":
-                    if comparison_mills_h[m][0][0] == pnts[r][1] and comparison_mills_h[m][0][1] == pnts[r][2]:
-                        x1 = pnts[r][1]
-                        y1 = pnts[r][2]
-                        counter += 1
-
-                    if comparison_mills_h[m][1][0] == pnts[r][1] and comparison_mills_h[m][1][1] == pnts[r][2]:
-                        counter += 1
-
-                    if comparison_mills_h[m][2][0] == pnts[r][1] and comparison_mills_h[m][2][1] == pnts[r][2]:
-                        x2 = pnts[r][1]
-                        y2 = pnts[r][2]
-                        counter += 1
-
-            if counter == 2:
-                print("2")
-                return
-            if counter == 3:
-                print("Mühle von (" + str(x1) + "/" + str(y1) + ") bis (" + str(x2) + "/" + str(y2) + ")")
-                VARIABLES.mills.append("P")
-                VARIABLES.mills.append([['i', x1, y1], ['i', x2, y2]])
-                print(VARIABLES.mills)
-        print("---------------------------------------------------------------------------------------------")
-        # --------------------------------------------------------------------------------------------------------------------
-        # vertikale Prüfung
-        print("Vertikal: ")
-        for m in range(len(comparison_mills_v)):
-            counter = 0
-            x1 = 0
-            y1 = 0
-            x2 = 0
-            y2 = 0
-
-            for r in range(len(pnts)):
-                if pnts[r][0] == "P":
-                    if comparison_mills_v[m][0][0] == pnts[r][1] and comparison_mills_v[m][0][1] == pnts[r][2]:
-                        x1 = pnts[r][1]
-                        y1 = pnts[r][2]
-                        counter += 1
-
-                    if comparison_mills_v[m][1][0] == pnts[r][1] and comparison_mills_v[m][1][1] == pnts[r][2]:
-                        counter += 1
-
-                    if comparison_mills_v[m][2][0] == pnts[r][1] and comparison_mills_v[m][2][1] == pnts[r][2]:
-                        x2 = pnts[r][1]
-                        y2 = pnts[r][2]
-                        counter += 1
-
-            if counter == 2:
-                print("2")
-                return
-            if counter == 3:
-                print("Mühle von (" + str(x1) + "/" + str(y1) + ") bis (" + str(x2) + "/" + str(y2) + ")")
-
-                # if comparison_mills[m][1][0] == pnts[r+1][1] and comparison_mills[m][1][1] == pnts[r+1][2]:
-                #  print("Two point of a Mill in common")
-                # if comparison_mills[m][1][0] == pnts[r+2][1] and comparison_mills[m][1][1] == pnts[r+2][2]:
-                # print("Two point of a Mill in common")
 
 
 check = CheckSetPoints()

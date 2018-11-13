@@ -23,7 +23,10 @@ class Muehle:
 
     def __init__(self):
 
-        self.num_pieces = 6
+        self.num_pieces = 9
+
+        # player_pieces = 9
+        # computer_pieces = 9
         print("Welcome to muehle")
         self.setupBoard()
 
@@ -42,6 +45,7 @@ class Muehle:
         player_display.place(x=500, y=950)
         player_display.pack_propagate()
 
+
         self.recognizeClick()
         self.showSettedPoints(VARIABLES.pieces)
         canvas.mainloop()
@@ -53,24 +57,30 @@ class Muehle:
         y_index = self.getIndexFromCoord(y)
         x_index = self.getIndexFromCoord(x)
 
-        # "Setzenmodus"
-        if VARIABLES.gamemode == 1:
-            if VARIABLES.muehle_grid[y_index][x_index] == 1 and VARIABLES.pieces[y_index][x_index] == "":
-                self.setPoint(y_index, x_index, "P")
-                self.num_pieces -= 1
-                self.showSettedPoints(VARIABLES.pieces)
-                AnalyzePlayBoard()
-                threading.Timer(2, self.game).start()
 
-        # "Schiebmodus"
-        if VARIABLES.gamemode == 2:
-            if VARIABLES.pieces[y_index][x_index] == "P":
-                # self.setPoint(y_index, x_index, "P")
-                # self.num_pieces -= 1
-                # self.showSettedPoints(VARIABLES.pieces)
-                # threading.Timer(2, self.game).start()
-                canvas.bind("<Button-1>", self.moveObject)
-                print(x_index)
+        if VARIABLES.muehle_grid[y_index][x_index] == 1:
+
+            self.num_pieces -= 1
+            # "Setzenmodus"
+            if VARIABLES.gamemode == 1:
+                if self.num_pieces == 0:
+                    VARIABLES.gamemode = 2
+                if VARIABLES.pieces[y_index][x_index] == "":
+                    self.setPoint(y_index, x_index, "P")
+                    self.num_pieces -= 1
+                    self.showSettedPoints(VARIABLES.pieces)
+                    AnalyzePlayBoard()
+                    threading.Timer(2, self.game).start()
+
+            # "Schiebmodus"
+            if VARIABLES.gamemode == 2:
+                if VARIABLES.pieces[y_index][x_index] == "P":
+                    # self.setPoint(y_index, x_index, "P")
+                    # self.num_pieces -= 1
+                    # self.showSettedPoints(VARIABLES.pieces)
+                    # threading.Timer(2, self.game).start()
+                    canvas.bind("<Button-1>", self.moveObject)
+                    print(x_index)
 
     def moveObject(self, event):
         x = event.x - 25

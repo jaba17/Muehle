@@ -3,20 +3,20 @@ from random import randint
 from Functions import *
 
 
-def checkCorner():
-
-    returnvalue = [-1, -1]
+# Gibt alle freien äußersten Eckenpunkte des Spielfeldes zurück
+def checkCorners():
+    possible_corners = []
 
     if VARIABLES.pieces[0][0] == "":
-        returnvalue = [0, 0]
+        possible_corners.append([0, 0])
     if VARIABLES.pieces[0][6] == "":
-        returnvalue = [0, 6]
+        possible_corners.append([0, 6])
     if VARIABLES.pieces[6][6] == "":
-        returnvalue = [6, 6]
+        possible_corners.append([6, 6])
     if VARIABLES.pieces[6][0] == "":
-        returnvalue = [6, 0]
+        possible_corners.append([6, 0])
 
-    return returnvalue
+    return possible_corners
 
 
 def isPossible(point):
@@ -87,7 +87,6 @@ def analyzeEnemyMill():
 
     print(enemy_points)
 
-
     # if points != []:
     #    for r in range(len(VARIABLES.mills_horizontal)):
     #        if enemy_points[0] == VARIABLES.mills_horizontal[r][0] and enemy_points[1] == VARIABLES.mills_horizontal[r][1]:
@@ -108,12 +107,12 @@ def analyzeEnemyMill():
     #  print(enemy_points[r])
     # print(enemy_points)
 
+
 # Diese Funktion entfernt einen Stein des Gegners
 def removeEnemyPoint():
-
     # for i in range(len(VARIABLES.pieces)):
-     #    for r in range(len(VARIABLES.pieces[i])):
-     #        if
+    #    for r in range(len(VARIABLES.pieces[i])):
+    #        if
 
     print(VARIABLES.mills)
 
@@ -156,9 +155,12 @@ class SetRound:
         # TODO: Verschließen
 
         # Anschließend wird überprüft, ob Ecken frei sind
-        if checkCorner() != [-1, -1]:
+        possible_corners = checkCorners()
+        if possible_corners:
+            rand_corner_index = randint(0, len(possible_corners) - 1)
+
             # Wemm ja wird dorthin ein Spielstein gesetzt
-            point = checkCorner()
+            point = possible_corners[rand_corner_index]
             VARIABLES.pieces[point[0]][point[1]] = "C"
 
         # Wenn der Computer nicht mehr weiter weiß setzt er seinen Stein auf ein zufälliges freies Feld

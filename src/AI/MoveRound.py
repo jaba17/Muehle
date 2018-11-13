@@ -1,8 +1,8 @@
 from core.VARIABLES import *
 
 
-# Prüft, ob diagonal gezogen werden kann
 def isPossible(from_loc, to_loc):
+    # Prüft, ob diagonal gezogen werden kann
     returnvalue = False
     if VARIABLES.muehle_grid[to_loc[0]][to_loc[1]] != -1:
 
@@ -30,7 +30,7 @@ def isPossible(from_loc, to_loc):
 class MoveRound:
 
     def __init__(self):
-        isPossible([0, 0], [3, 0])
+        print(isPossible([0, 0], [0, 3]))
 
     @staticmethod
     def movePoint(point_x, point_y):

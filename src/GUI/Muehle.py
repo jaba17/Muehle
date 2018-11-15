@@ -18,6 +18,21 @@ image = image.resize((900, 900))
 image_tk = ImageTk.PhotoImage(image)
 canvas.create_image(2, 2, image=image_tk, anchor=NW)
 
+# Überprüft, ob
+def checkLocForMill(ind, user):
+
+    muehle_array = []
+    for r in range(len(VARIABLES.mills_horizontal)):
+        for s in range(len(VARIABLES.mills_horizontal[r])):
+            if VARIABLES.mills_horizontal[r][s] == ind:
+                muehle_array = VARIABLES.mills_horizontal[r]
+
+    if VARIABLES.pieces[muehle_array[0][0]][muehle_array[0][1]] == user and VARIABLES.pieces[muehle_array[1][0]][muehle_array[1][1]] == user and VARIABLES.pieces[muehle_array[2][0]][muehle_array[2][1]] == user:
+        print("You just made a Mühle")
+        VARIABLES.mills.append([user, muehle_array[0], muehle_array[2]])
+
+
+
 
 class Muehle:
 
@@ -27,10 +42,13 @@ class Muehle:
 
         # player_pieces = 9
         # computer_pieces = 9
-        print("Welcome to muehle")
-        self.setupBoard()
+        checkLocForMill([6, 6], "P")
 
-        canvas.mainloop()
+
+        # print("Welcome to muehle")
+        # self.setupBoard()
+
+        # canvas.mainloop()
 
     def setupBoard(self):
         piece_display = tkinter.Label(canvas, text="Anzahl der Steine: " + str(self.num_pieces))
@@ -41,10 +59,9 @@ class Muehle:
         task_display.place(x=300, y=950)
         task_display.pack_propagate()
 
-        player_display = tkinter.Label(canvas, text="Aktiver Spieler: " + "")
+        player_display = tkinter.Label(canvas, text="Aktiver Spieler: " + VARIABLES.active_player)
         player_display.place(x=500, y=950)
         player_display.pack_propagate()
-
 
         self.recognizeClick()
         self.showSettedPoints(VARIABLES.pieces)
@@ -57,7 +74,6 @@ class Muehle:
         y_index = self.getIndexFromCoord(y)
         x_index = self.getIndexFromCoord(x)
 
-
         if VARIABLES.muehle_grid[y_index][x_index] == 1:
 
             self.num_pieces -= 1
@@ -66,6 +82,7 @@ class Muehle:
                 if self.num_pieces == 0:
                     VARIABLES.gamemode = 2
                 if VARIABLES.pieces[y_index][x_index] == "":
+                    self.checkLocForMills([y_index, x_index])
                     self.setPoint(y_index, x_index, "P")
                     self.num_pieces -= 1
                     self.showSettedPoints(VARIABLES.pieces)
@@ -82,6 +99,9 @@ class Muehle:
                     canvas.bind("<Button-1>", self.moveObject)
                     print(x_index)
 
+    # for s in range(VARIABLES.pieces):
+
+
     def moveObject(self, event):
         x = event.x - 25
         y = event.y - 25
@@ -89,8 +109,7 @@ class Muehle:
         y_index = self.getIndexFromCoord(y)
         x_index = self.getIndexFromCoord(x)
 
-        print("move object "+str(y_index))
-
+        print("move object " + str(y_index))
 
     def getIndexFromCoord(self, coord):
         index = 0
@@ -107,8 +126,8 @@ class Muehle:
         # Übergibt an die KI
         AI.gameSet()
 
-#         elif VARIABLES.gamemode == 2:
-  #           print("GameMode2")
+        #         elif VARIABLES.gamemode == 2:
+        #           print("GameMode2")
 
         self.showSettedPoints(VARIABLES.pieces)
 
@@ -134,7 +153,6 @@ class Muehle:
                                        VARIABLES.point_location[r] + 10,
                                        VARIABLES.point_location[s] + 40,
                                        VARIABLES.point_location[r] + 40, width=3.5, fill='white')
-
 
     canvas.pack(expand=YES, fill=BOTH)
 

@@ -1,7 +1,6 @@
 from Functions import *
 
 
-
 class SetPoints:
 
     def __init__(self):
@@ -13,7 +12,6 @@ class SetPoints:
 
         # self.convertMatrix(VARIABLES.pieces)
         # self.checkPoints(locations)
-
 
     def setPoint(self, pnts):
         # Prüfung ob fast eine Mühle gebaut wurde

@@ -141,8 +141,8 @@ class SetRound:
         # self.blockEnemyMill()
         # self.createMill()
         # analyzeEnemyMill()
-        removeEnemyPoint()
-        checkMill()
+        # removeEnemyPoint()
+        print(recognizePossibleMills())
 
     @staticmethod
     def setPoint():

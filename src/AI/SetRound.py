@@ -110,11 +110,43 @@ def analyzeEnemyMill():
 
 # Diese Funktion entfernt einen Stein des Gegners
 def removeEnemyPoint():
-    # for i in range(len(VARIABLES.pieces)):
-    #    for r in range(len(VARIABLES.pieces[i])):
-    #        if
+    forbidden_points = []
+    accepted_points = []
+    point_to_delete = [-1, -1]
+    # Ermittelt alle Punkte, die nicht besetzt werden dürfen, da sie Teil einer Mühle sind
+    for r in range(len(VARIABLES.mills_horizontal)):
+        if VARIABLES.pieces[VARIABLES.mills_horizontal[r][0][0]][VARIABLES.mills_horizontal[r][0][1]] == "P" and \
+                VARIABLES.pieces[VARIABLES.mills_horizontal[r][1][0]][VARIABLES.mills_horizontal[r][1][1]] == "P" and \
+                VARIABLES.pieces[VARIABLES.mills_horizontal[r][1][0]][VARIABLES.mills_horizontal[r][2][1]] == "P":
+            forbidden_points.append(VARIABLES.mills_horizontal[r][0])
+            forbidden_points.append(VARIABLES.mills_horizontal[r][1])
+            forbidden_points.append(VARIABLES.mills_horizontal[r][2])
 
-    print(VARIABLES.mills)
+    # Ermittelt alle erlaubten Punkte
+    for r in range(len(VARIABLES.pieces)):
+        for s in range(len(VARIABLES.pieces[r])):
+            if VARIABLES.pieces[r][s] == "P":
+                if [r, s] not in forbidden_points:
+                    accepted_points.append([r, s])
+
+    # sucht die Eckpunkte aus
+    for r in range(len(accepted_points)):
+        if accepted_points[r] == [0, 0]:
+            print("Eckpunkt 0/0")
+
+        if accepted_points[r] == [0, 6]:
+            print("Eckpunkt 0/6")
+
+        if accepted_points[r] == [6, 0]:
+            print("Eckpunkt 6/0")
+
+        if accepted_points[r] == [6, 6]:
+            print("Eckpunkt 6/6")
+            # point_to_delete == [0, 0]
+    # print(accepted_points)
+
+    #
+
 
 
 def checkMill():
@@ -142,7 +174,8 @@ class SetRound:
         # self.createMill()
         # analyzeEnemyMill()
         # removeEnemyPoint()
-        print(recognizePossibleMills())
+        # print(recognizePossibleMills())
+        removeEnemyPoint()
 
     @staticmethod
     def setPoint():

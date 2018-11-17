@@ -12,26 +12,26 @@ task = ""
 active_player = TRUE
 
 canvas = Canvas(width=900, height=1000, bg='white')
+points_b = [[None] * 7] * 7
 canvas.grid()
 image = Image.open("res/muehle_spielbrett.png")
 image = image.resize((900, 900))
 image_tk = ImageTk.PhotoImage(image)
 canvas.create_image(2, 2, image=image_tk, anchor=NW)
 
+
 # Überprüft, ob
 def checkLocForMill(ind, user):
-
     muehle_array = []
     for r in range(len(VARIABLES.mills_horizontal)):
         for s in range(len(VARIABLES.mills_horizontal[r])):
             if VARIABLES.mills_horizontal[r][s] == ind:
                 muehle_array = VARIABLES.mills_horizontal[r]
 
-    if VARIABLES.pieces[muehle_array[0][0]][muehle_array[0][1]] == user and VARIABLES.pieces[muehle_array[1][0]][muehle_array[1][1]] == user and VARIABLES.pieces[muehle_array[2][0]][muehle_array[2][1]] == user:
+    if VARIABLES.pieces[muehle_array[0][0]][muehle_array[0][1]] == user and VARIABLES.pieces[muehle_array[1][0]][
+        muehle_array[1][1]] == user and VARIABLES.pieces[muehle_array[2][0]][muehle_array[2][1]] == user:
         print("You just made a Mühle")
         VARIABLES.mills.append([user, muehle_array[0], muehle_array[2]])
-
-
 
 
 class Muehle:
@@ -42,12 +42,10 @@ class Muehle:
 
         # player_pieces = 9
         # computer_pieces = 9
-        checkLocForMill([6, 6], "P")
+        checkLocForMill([6, 6], "C")
 
-
-        # print("Welcome to muehle")
-        # self.setupBoard()
-
+        print("Welcome to muehle")
+        self.setupBoard()
         # canvas.mainloop()
 
     def setupBoard(self):
@@ -74,6 +72,9 @@ class Muehle:
         y_index = self.getIndexFromCoord(y)
         x_index = self.getIndexFromCoord(x)
 
+        self.highlightMill([[0, 0], [0, 6]])
+
+
         if VARIABLES.muehle_grid[y_index][x_index] == 1:
 
             self.num_pieces -= 1
@@ -82,8 +83,8 @@ class Muehle:
                 if self.num_pieces == 0:
                     VARIABLES.gamemode = 2
                 if VARIABLES.pieces[y_index][x_index] == "":
-                    self.checkLocForMills([y_index, x_index])
                     self.setPoint(y_index, x_index, "P")
+                    checkLocForMill([y_index, x_index], "P")
                     self.num_pieces -= 1
                     self.showSettedPoints(VARIABLES.pieces)
                     AnalyzePlayBoard()
@@ -96,11 +97,30 @@ class Muehle:
                     # self.num_pieces -= 1
                     # self.showSettedPoints(VARIABLES.pieces)
                     # threading.Timer(2, self.game).start()
+                    VARIABLES.pieces[y_index][x_index] = ""
                     canvas.bind("<Button-1>", self.moveObject)
                     print(x_index)
 
+                    self.showSettedPoints(VARIABLES.pieces)
+
     # for s in range(VARIABLES.pieces):
 
+    def deleteElement(self, loc):
+        pass
+
+    def highlightMill(self, mill):
+        x1 = mill[0][0]
+        y1 = mill[0][1]
+
+        x1 = mill[1][0]
+        y1 = mill[1][1]
+
+        obj = points_b[x1][y1]
+        print("df")
+        pass
+
+    def highlightPoint(self, loc):
+        pass
 
     def moveObject(self, event):
         x = event.x - 25
@@ -142,17 +162,21 @@ class Muehle:
 
         for r in range(7):
             for s in range(7):
+
+                if grid[r][s] == "":
+                    pass
+
                 if grid[r][s] == "P":
-                    canvas.create_oval(VARIABLES.point_location[s] + 10,
-                                       VARIABLES.point_location[r] + 10,
-                                       VARIABLES.point_location[s] + 40,
-                                       VARIABLES.point_location[r] + 40, width=3.5, fill='black')
+                    points_b[r][s] = canvas.create_oval(VARIABLES.point_location[s] + 10,
+                                                        VARIABLES.point_location[r] + 10,
+                                                        VARIABLES.point_location[s] + 40,
+                                                        VARIABLES.point_location[r] + 40, width=3.5, fill='black')
 
                 if grid[r][s] == "C":
                     canvas.create_oval(VARIABLES.point_location[s] + 10,
-                                       VARIABLES.point_location[r] + 10,
-                                       VARIABLES.point_location[s] + 40,
-                                       VARIABLES.point_location[r] + 40, width=3.5, fill='white')
+                                                        VARIABLES.point_location[r] + 10,
+                                                        VARIABLES.point_location[s] + 40,
+                                                        VARIABLES.point_location[r] + 40, width=3.5, fill='white')
 
     canvas.pack(expand=YES, fill=BOTH)
 

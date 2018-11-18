@@ -40,6 +40,7 @@ class Functions:
         print(self.nextPossiblePoint(x_coord, y_coord, dir))
 
         # Bei dieser Methode wird der
+#
 
     @staticmethod
     def checkForMills(pnts, user):
@@ -53,28 +54,38 @@ class Functions:
             y1 = 0
             x2 = 0
             y2 = 0
+            x3 = 0
+            y3 = 0
 
-            for r in range(len(pnts)):
+            for r in range(len(pnts)-2):
                 if pnts[r][0] == user:
-                    if comparison_mills_h[m][0][0] == pnts[r][1] and comparison_mills_h[m][0][1] == pnts[r][2]:
-                        x1 = pnts[r][1]
-                        y1 = pnts[r][2]
-                        counter += 1
+                    if [pnts[r][1], pnts[r][2]] in comparison_mills_h[m]:
+                        x1 = comparison_mills_h[m][0][0]
+                        y1 = comparison_mills_h[m][0][1]
+                        if [pnts[r+1][1], pnts[r+1][2]] in comparison_mills_h[m]:
+                            x2 = comparison_mills_h[m][1][0]
+                            y2 = comparison_mills_h[m][1][1]
+                            if [pnts[r + 2][1], pnts[r + 2][2]] in comparison_mills_h[m]:
+                                x3 = comparison_mills_h[m][2][0]
+                                y3 = comparison_mills_h[m][2][1]
+                                VARIABLES.mills.append([user, [x1, y1], [x2, y2], [x3, y3]])
 
-                    if comparison_mills_h[m][1][0] == pnts[r][1] and comparison_mills_h[m][1][1] == pnts[r][2]:
-                        counter += 1
+                    # if comparison_mills_h[m][1][0] == pnts[r][1] and comparison_mills_h[m][1][1] == pnts[r][2]:
+                        # x2 = pnts[r][1]
+        #                y2 = pnts[r][2]
+         #               counter += 1
+#
+ #                   if comparison_mills_h[m][2][0] == pnts[r][1] and comparison_mills_h[m][2][1] == pnts[r][2]:
+  #                      x3 = pnts[r][1]
+   #                     y3 = pnts[r][2]
+    #                    counter += 1
 
-                    if comparison_mills_h[m][2][0] == pnts[r][1] and comparison_mills_h[m][2][1] == pnts[r][2]:
-                        x2 = pnts[r][1]
-                        y2 = pnts[r][2]
-                        counter += 1
-
-            if counter == 2:
-                print("2")
-                return
-            if counter == 3:
-                VARIABLES.mills.append([user, [x1, y1], [x2, y2]])
-
+           #  if counter == 2:
+             #    print("2")
+               #  return
+           #  if counter == 3:
+             #    VARIABLES.mills.append([user, [x1, y1], [x2, y2], [x3, y3]])
+        print(VARIABLES.mills)
 
 
         # --------------------------------------------------------------------------------------------------------------------
@@ -85,6 +96,8 @@ class Functions:
             y1 = 0
             x2 = 0
             y2 = 0
+            x3 = 0
+            y3 = 0
 
             for r in range(len(pnts)):
                 if pnts[r][0] == user:
@@ -94,18 +107,20 @@ class Functions:
                         counter += 1
 
                     if comparison_mills_v[m][1][0] == pnts[r][1] and comparison_mills_v[m][1][1] == pnts[r][2]:
+                        x2 = pnts[r][1]
+                        y2 = pnts[r][2]
                         counter += 1
 
                     if comparison_mills_v[m][2][0] == pnts[r][1] and comparison_mills_v[m][2][1] == pnts[r][2]:
-                        x2 = pnts[r][1]
-                        y2 = pnts[r][2]
+                        x3 = pnts[r][1]
+                        y3 = pnts[r][2]
                         counter += 1
 
             if counter == 2:
                 print("2")
                 return
             if counter == 3:
-                VARIABLES.mills.append([user, [x1, y1], [x2, y2]])
+                VARIABLES.mills.append([user, [x1, y1], [x2, y2], [x3, y3]])
                 # if comparison_mills[m][1][0] == pnts[r+1][1] and comparison_mills[m][1][1] == pnts[r+1][2]:
                 #  print("Two point of a Mill in common")
                 # if comparison_mills[m][1][0] == pnts[r+2][1] and comparison_mills[m][1][1] == pnts[r+2][2]:

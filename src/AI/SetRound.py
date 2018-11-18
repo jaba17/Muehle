@@ -122,6 +122,15 @@ def removeEnemyPoint():
             forbidden_points.append(VARIABLES.mills_horizontal[r][1])
             forbidden_points.append(VARIABLES.mills_horizontal[r][2])
 
+    for r in range(len(VARIABLES.mills_vertical)):
+        if VARIABLES.pieces[VARIABLES.mills_vertical[r][0][0]][VARIABLES.mills_vertical[r][0][1]] == "P" and \
+                VARIABLES.pieces[VARIABLES.mills_vertical[r][1][0]][VARIABLES.mills_vertical[r][1][1]] == "P" and \
+                VARIABLES.pieces[VARIABLES.mills_vertical[r][1][0]][VARIABLES.mills_vertical[r][2][1]] == "P":
+            forbidden_points.append(VARIABLES.mills_vertical[r][0])
+            forbidden_points.append(VARIABLES.mills_vertical[r][1])
+            forbidden_points.append(VARIABLES.mills_vertical[r][2])
+
+
     # Ermittelt alle erlaubten Punkte
     for r in range(len(VARIABLES.pieces)):
         for s in range(len(VARIABLES.pieces[r])):
@@ -129,6 +138,7 @@ def removeEnemyPoint():
                 if [r, s] not in forbidden_points:
                     accepted_points.append([r, s])
 
+    print(accepted_points)
     # sucht die Eckpunkte aus
     for r in range(len(accepted_points)):
         if accepted_points[r] == [0, 0]:
@@ -146,8 +156,36 @@ def removeEnemyPoint():
     # print(accepted_points)
 
     #
+        # if accepted_points[r] in
 
 
+def missingMiddle():
+    locations = Functions.describeBoard(VARIABLES.pieces)
+    # self.checkForMills(locations)
+    Functions.checkForMills(locations, "P")
+    for r in range(len(VARIABLES.mills_horizontal)):
+        span_sum = VARIABLES.mills_horizontal[r][2][1] - VARIABLES.mills_horizontal[r][0][1]
+        middle_index = int(VARIABLES.mills_horizontal[r][0][1]+span_sum/2)
+        print(str(VARIABLES.mills_horizontal[r][1][0])+"/"+str(middle_index))
+        for s in range(len(VARIABLES.mills)):
+            if [VARIABLES.mills_horizontal[r][1][0], middle_index] == VARIABLES.mills[s][2]:
+                print("df")
+
+def missingRight():
+    locations = Functions.describeBoard(VARIABLES.pieces)
+    # self.checkForMills(locations)
+    Functions.checkForMills(locations, "P")
+    for r in range(len(VARIABLES.mills_horizontal)):
+        for s in range(len(VARIABLES.points)-1):
+            if locations[s][0] == "P":
+                if [[locations[s][1], locations[s][2]], [locations[s+1][1], locations[s+1][2]]] == [VARIABLES.mills_horizontal[r][0], VARIABLES.mills_horizontal[r][1]]:
+                    print("df")
+    pass
+
+
+def missingLeft():
+
+    pass
 
 def checkMill():
     # Nun werden alle möglichen Mühlen aufgespürt und eine zufällige ausgewählt
@@ -175,8 +213,8 @@ class SetRound:
         # analyzeEnemyMill()
         # removeEnemyPoint()
         # print(recognizePossibleMills())
-        removeEnemyPoint()
-
+        # removeEnemyPoint()
+        missingRight()
     @staticmethod
     def setPoint():
 

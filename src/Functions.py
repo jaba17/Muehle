@@ -1,4 +1,26 @@
 from core.VARIABLES import *
+from core.VARIABLES import VARIABLES
+
+
+def checkNewLocForMill(ind, user):
+    muehle_array = []
+    for r in range(len(VARIABLES.mills_horizontal)):
+        if ind in VARIABLES.mills_horizontal[r]:
+            muehle_array = VARIABLES.mills_horizontal[r]
+
+    if VARIABLES.pieces[muehle_array[0][0]][muehle_array[0][1]] == user and VARIABLES.pieces[muehle_array[1][0]][
+        muehle_array[1][1]] == user and VARIABLES.pieces[muehle_array[2][0]][muehle_array[2][1]] == user:
+        print("You just made a Mühle")
+        VARIABLES.mills.append([user, muehle_array[0], muehle_array[2]])
+
+    for r in range(len(VARIABLES.mills_vertical)):
+        if ind in VARIABLES.mills_vertical[r]:
+            muehle_array = VARIABLES.mills_vertical[r]
+
+    if VARIABLES.pieces[muehle_array[0][0]][muehle_array[0][1]] == user and VARIABLES.pieces[muehle_array[1][0]][
+        muehle_array[1][1]] == user and VARIABLES.pieces[muehle_array[2][0]][muehle_array[2][1]] == user:
+        print("You just made a Mühle")
+        VARIABLES.mills.append([user, muehle_array[0], muehle_array[2]])
 
 
 class Functions:
@@ -68,7 +90,7 @@ class Functions:
                             if [pnts[r + 2][1], pnts[r + 2][2]] in comparison_mills_h[m]:
                                 x3 = comparison_mills_h[m][2][0]
                                 y3 = comparison_mills_h[m][2][1]
-                                VARIABLES.mills.append([user, [x1, y1], [x2, y2], [x3, y3]])
+                                # VARIABLES.mills.append([user, [x1, y1], [x2, y2], [x3, y3]])
 
                     # if comparison_mills_h[m][1][0] == pnts[r][1] and comparison_mills_h[m][1][1] == pnts[r][2]:
                         # x2 = pnts[r][1]
@@ -120,7 +142,8 @@ class Functions:
                 print("2")
                 return
             if counter == 3:
-                VARIABLES.mills.append([user, [x1, y1], [x2, y2], [x3, y3]])
+                pass
+                # VARIABLES.mills.append([user, [x1, y1], [x2, y2], [x3, y3]])
                 # if comparison_mills[m][1][0] == pnts[r+1][1] and comparison_mills[m][1][1] == pnts[r+1][2]:
                 #  print("Two point of a Mill in common")
                 # if comparison_mills[m][1][0] == pnts[r+2][1] and comparison_mills[m][1][1] == pnts[r+2][2]:
@@ -179,3 +202,5 @@ class Functions:
 
         print(returnvalue)
         return returnvalue
+
+    # Überprüft, ob durch den neu gesetzten Punkt eine Mühle entstanden ist

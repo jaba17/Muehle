@@ -56,22 +56,22 @@ def recognizePossibleMills():
     return possible_mills
 
 
-def setPointAsClicked(number):
-    counter = 0
-    for r in range(len(VARIABLES.pieces)):
-        for s in range(len(VARIABLES.pieces[r])):
-            if VARIABLES.pieces[r][s] != "-":
-                counter += 1
-                if counter == number:
-                    print(str(r) + " " + str(s))
+# def setPointAsClicked(number):
+#     counter = 0
+#     for r in range(len(VARIABLES.pieces)):
+#         for s in range(len(VARIABLES.pieces[r])):
+#             if VARIABLES.pieces[r][s] != "-":
+#                 counter += 1
+#                 if counter == number:
+#                     print(str(r) + " " + str(s))
 
 
-def createMill():
-    recognizePossibleMills()
-
-    # for r in range(len(possible_mills)):
-    # print()
-    # Entscheidet ob horrizontal oder vertikal
+# def createMill():
+#     recognizePossibleMills()
+#
+#     # for r in range(len(possible_mills)):
+#     # print()
+#     # Entscheidet ob horrizontal oder vertikal
 
 
 def blockEnemyMill():
@@ -130,7 +130,6 @@ def removeEnemyPoint():
             forbidden_points.append(VARIABLES.mills_vertical[r][1])
             forbidden_points.append(VARIABLES.mills_vertical[r][2])
 
-
     # Ermittelt alle erlaubten Punkte
     for r in range(len(VARIABLES.pieces)):
         for s in range(len(VARIABLES.pieces[r])):
@@ -156,7 +155,7 @@ def removeEnemyPoint():
     # print(accepted_points)
 
     #
-        # if accepted_points[r] in
+    # if accepted_points[r] in
 
 
 def missingMiddle():
@@ -165,27 +164,51 @@ def missingMiddle():
     Functions.checkForMills(locations, "P")
     for r in range(len(VARIABLES.mills_horizontal)):
         span_sum = VARIABLES.mills_horizontal[r][2][1] - VARIABLES.mills_horizontal[r][0][1]
-        middle_index = int(VARIABLES.mills_horizontal[r][0][1]+span_sum/2)
-        print(str(VARIABLES.mills_horizontal[r][1][0])+"/"+str(middle_index))
+        middle_index = int(VARIABLES.mills_horizontal[r][0][1] + span_sum / 2)
+        print(str(VARIABLES.mills_horizontal[r][1][0]) + "/" + str(middle_index))
         for s in range(len(VARIABLES.mills)):
             if [VARIABLES.mills_horizontal[r][1][0], middle_index] == VARIABLES.mills[s][2]:
                 print("df")
 
+
 def missingRight():
-    locations = Functions.describeBoard(VARIABLES.pieces)
+    ret_val = [-1, -1]
+    missingRight_pnts = []
+    VARIABLES.points = Functions.describeBoard(VARIABLES.pieces)
     # self.checkForMills(locations)
-    Functions.checkForMills(locations, "P")
+    # Functions.checkForMills(VARIABLES.points, "P")
     for r in range(len(VARIABLES.mills_horizontal)):
-        for s in range(len(VARIABLES.points)-1):
-            if locations[s][0] == "P":
-                if [[locations[s][1], locations[s][2]], [locations[s+1][1], locations[s+1][2]]] == [VARIABLES.mills_horizontal[r][0], VARIABLES.mills_horizontal[r][1]]:
-                    print("df")
-    pass
+        for s in range(len(VARIABLES.points) - 1):
+            if VARIABLES.points[s][0] == "P":
+                if [[VARIABLES.points[s][1], VARIABLES.points[s][2]],
+                    [VARIABLES.points[s + 1][1], VARIABLES.points[s + 1][2]]] == [VARIABLES.mills_horizontal[r][0],
+                                                                                  VARIABLES.mills_horizontal[r][1]] \
+                        and VARIABLES.pieces[VARIABLES.mills_horizontal[r][2][0]][
+                    VARIABLES.mills_horizontal[r][2][1]] == "":
+                    print("missing right at " + str(VARIABLES.mills_horizontal[r][2]))
+                    missingRight_pnts.append(VARIABLES.mills_horizontal[r][2])
+    print(str(missingRight_pnts))
+    if len(missingRight_pnts) != 0:
+        rand_int = randint(0, len(missingRight_pnts))
+        ret_val = missingRight_pnts[rand_int]
+
+    return ret_val
 
 
 def missingLeft():
-
-    pass
+    ret_val = [-1, -1]
+    missingLeft_pnts = []
+    VARIABLES.points = Functions.describeBoard(VARIABLES.pieces)
+    # self.checkForMills(locations)
+    # Functions.checkForMills(VARIABLES.points, "P")
+    for r in range(len(VARIABLES.mills_horizontal)):
+        if VARIABLES.pieces[VARIABLES.mills_horizontal[r][0][0]][VARIABLES.mills_horizontal[r][0][1]] == "" and \
+                VARIABLES.pieces[VARIABLES.mills_horizontal[r][1][0]][VARIABLES.mills_horizontal[r][1][1]] == "P" and \
+                VARIABLES.pieces[VARIABLES.mills_horizontal[r][2][0]][VARIABLES.mills_horizontal[r][2][1]] == "P":
+            print("missing left at " + str(VARIABLES.mills_horizontal[r][0]))
+            if len(missingLeft_pnts) != 0:
+                rand_int = randint(0, len(missingLeft_pnts))
+            ret_val
 
 def checkMill():
     # Nun werden alle möglichen Mühlen aufgespürt und eine zufällige ausgewählt
@@ -205,7 +228,12 @@ def checkMill():
         print(VARIABLES.pieces)
 
 
+def buildMill():
+    pass
+
+
 class SetRound:
+    activeMill = [[-1, -1], [-1, -1], [-1, -1]]
 
     def __init__(self):
         # self.blockEnemyMill()
@@ -214,7 +242,11 @@ class SetRound:
         # removeEnemyPoint()
         # print(recognizePossibleMills())
         # removeEnemyPoint()
-        missingRight()
+        # missingRight()
+        missingLeft()
+
+        pass
+
     @staticmethod
     def setPoint():
 
@@ -226,13 +258,18 @@ class SetRound:
         # TODO: Verschließen
 
         # Anschließend wird überprüft, ob Ecken frei sind
+        missingRight_ret = missingRight()
+        if missingRight_ret != [-1, -1]:
+            point = missingRight_ret
+
         possible_corners = checkCorners()
         if possible_corners:
             rand_corner_index = randint(0, len(possible_corners) - 1)
 
             # Wemm ja wird dorthin ein Spielstein gesetzt
             point = possible_corners[rand_corner_index]
-            VARIABLES.pieces[point[0]][point[1]] = "C"
+
+
 
         # Wenn der Computer nicht mehr weiter weiß setzt er seinen Stein auf ein zufälliges freies Feld
         else:
@@ -243,8 +280,11 @@ class SetRound:
                 rand_point = [randint(0, 6), randint(0, 6)]
 
                 if isPossible(rand_point):
-                    VARIABLES.pieces[rand_point[0]][rand_point[1]] = "C"
+                    point = rand_point
                     found = True
+
+        VARIABLES.pieces[point[0]][point[1]] = "C"
+        checkNewLocForMill([point[0], point[1]], "C")
 
     # direction = randint(0,1)
     # rand_num = randint(0, len(mills_horizontal + mills_vertical))

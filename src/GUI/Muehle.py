@@ -5,6 +5,7 @@ from PIL import Image
 from PIL import ImageTk
 
 from AI.AI import AI
+from Functions import *
 from core.AnalyzePlayBoard import AnalyzePlayBoard
 from core.VARIABLES import *
 
@@ -20,20 +21,6 @@ image_tk = ImageTk.PhotoImage(image)
 canvas.create_image(2, 2, image=image_tk, anchor=NW)
 
 
-# Überprüft, ob
-def checkLocForMill(ind, user):
-    muehle_array = []
-    for r in range(len(VARIABLES.mills_horizontal)):
-        for s in range(len(VARIABLES.mills_horizontal[r])):
-            if VARIABLES.mills_horizontal[r][s] == ind:
-                muehle_array = VARIABLES.mills_horizontal[r]
-
-    if VARIABLES.pieces[muehle_array[0][0]][muehle_array[0][1]] == user and VARIABLES.pieces[muehle_array[1][0]][
-        muehle_array[1][1]] == user and VARIABLES.pieces[muehle_array[2][0]][muehle_array[2][1]] == user:
-        print("You just made a Mühle")
-        VARIABLES.mills.append([user, muehle_array[0], muehle_array[2]])
-
-
 class Muehle:
 
     def __init__(self):
@@ -42,7 +29,7 @@ class Muehle:
 
         # player_pieces = 9
         # computer_pieces = 9
-        checkLocForMill([6, 6], "C")
+        checkNewLocForMill([6, 6], "C")
 
         print("Welcome to muehle")
         self.setupBoard()
@@ -77,14 +64,15 @@ class Muehle:
 
         if VARIABLES.muehle_grid[y_index][x_index] == 1:
 
-            self.num_pieces -= 1
             # "Setzenmodus"
             if VARIABLES.gamemode == 1:
+                self.num_pieces -= 1
                 if self.num_pieces == 0:
                     VARIABLES.gamemode = 2
                 if VARIABLES.pieces[y_index][x_index] == "":
                     self.setPoint(y_index, x_index, "P")
-                    checkLocForMill([y_index, x_index], "P")
+                    checkNewLocForMill([y_index, x_index], "P")
+                    print(VARIABLES.mills)
                     self.num_pieces -= 1
                     self.showSettedPoints(VARIABLES.pieces)
                     AnalyzePlayBoard()
@@ -98,6 +86,7 @@ class Muehle:
                     # self.showSettedPoints(VARIABLES.pieces)
                     # threading.Timer(2, self.game).start()
                     VARIABLES.pieces[y_index][x_index] = ""
+                    print(VARIABLES.pieces)
                     canvas.bind("<Button-1>", self.moveObject)
                     print(x_index)
 
@@ -159,7 +148,6 @@ class Muehle:
         canvas.bind("<Button-1>", self.onObjectClick)
 
     def showSettedPoints(self, grid):
-
         for r in range(7):
             for s in range(7):
 

@@ -10,7 +10,6 @@ class CheckSetPoints:
 
         locations = Functions.describeBoard(VARIABLES.pieces)
         # self.checkForMills(locations)
-        Functions.checkForMills(locations)
         # self.convertMatrix(VARIABLES.pieces)
         # self.checkPoints(locations)
 
@@ -19,7 +18,6 @@ class CheckSetPoints:
         print(pnts)
         print("----------------------------------------------")
         print("Mills: ")
-        Functions.checkForMills(pnts)
         print("----------------------------------------------")
 
     def checkForDoubleMill(self, pnts):

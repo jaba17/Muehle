@@ -25,7 +25,7 @@ class Muehle:
 
     def __init__(self):
 
-        self.num_pieces = 9
+        self.num_pieces = 20
 
         # player_pieces = 9
         # computer_pieces = 9
@@ -61,7 +61,6 @@ class Muehle:
 
         self.highlightMill([[0, 0], [0, 6]])
 
-
         if VARIABLES.muehle_grid[y_index][x_index] == 1:
 
             # "Setzenmodus"
@@ -96,6 +95,7 @@ class Muehle:
 
     def deleteElement(self, loc):
         pass
+
 
     def highlightMill(self, mill):
         x1 = mill[0][0]

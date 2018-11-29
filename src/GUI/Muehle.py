@@ -1,3 +1,4 @@
+import os
 import threading
 import tkinter
 from tkinter import *
@@ -15,7 +16,10 @@ active_player = TRUE
 canvas = Canvas(width=900, height=1000, bg='white')
 points_b = [[None] * 7] * 7
 canvas.grid()
-image = Image.open("res/muehle_spielbrett.png")
+os.chdir("..")
+absolute_path = os.path.dirname(os.path.abspath(os.curdir))
+print(absolute_path)
+image = Image.open(absolute_path+"/res/muehle_spielbrett.png")
 image = image.resize((900, 900))
 image_tk = ImageTk.PhotoImage(image)
 canvas.create_image(2, 2, image=image_tk, anchor=NW)
